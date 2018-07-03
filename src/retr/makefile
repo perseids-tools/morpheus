@@ -53,7 +53,7 @@ install: tlg_sel
 
 #if using the automaton functions make sure that your CFLAGS includes
 #this option
-#CFLAGS=-I../auto -I.
+#CFLAGS+=-I../auto -I.
 
 #make sure that you use ranlib if running under Berkeley 4.X
 ${SRCHLIB}: ${SRCHOBJ} ${CIRCOBJ}
@@ -67,12 +67,12 @@ getref: getref.o refmain.o ${UTILS} ${SRCHLIB}
 
 
 #tlg_sel with cdfs
-#CFLAGS=-I. -I../auto -DAUTOMATON=1 -DCDFS=1 
+#CFLAGS+=-I. -I../auto -DAUTOMATON=1 -DCDFS=1 
 #tlg_sel: ${UTILS} selmain.o ${LIBS}
 #	${CC} -o tlg_sel ${UTILS} selmain.o ${LIBS}
 
 #tlg_sel without cdfs
-CFLAGS=-I. -I../auto -DAUTOMATON=1 -DCDFS=0
+CFLAGS+=-I. -I../auto -DAUTOMATON=1 -DCDFS=0
 tlg_sel: ${UTILS} selmain.o ${SRCHLIB} ../auto/gen.a 
 	${CC} -o tlg_sel ${UTILS} selmain.o ${SRCHLIB} ../auto/gen.a ${GREEKLIB}
 
@@ -92,7 +92,7 @@ getfld: ${UTILS} getfld.o ${SRCHLIB} ../auto/gen.a
 # ("make clean" should do the trick). make sure you have
 # the appropriate CFLAGS set
 #
-#CFLAGS=-DAUTOMATON=0 -DCDFS=0
+#CFLAGS+=-DAUTOMATON=0 -DCDFS=0
 shortsel:${UTILS} selmain.o ${SRCHOBJ} 
 	${CC} -o shortsel ${UTILS} selmain.o ${SRCHOBJ}
 
@@ -100,7 +100,7 @@ shortsel:${UTILS} selmain.o ${SRCHOBJ}
 # autosel is an intermediate version of tlg_sel: it uses ../auto/gen.a,
 # but *not* the CDFS code. to compile it, run "make clean",
 #
-#CFLAGS=-I. -I../auto -DAUTOMATON=1 -DCDFS=0
+#CFLAGS+=-I. -I../auto -DAUTOMATON=1 -DCDFS=0
 autosel: ${UTILS} selmain.o ${SRCHOBJ} ${CIRCOBJ} ../auto/gen.a 
 	${CC} -o autosel ${UTILS} selmain.o ${SRCHOBJ} ${CIRCOBJ} ../auto/gen.a 
 

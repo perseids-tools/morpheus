@@ -1,5 +1,5 @@
 INCLUDE=../includes
-CFLAGS= -O2 -I${INCLUDE}
+CFLAGS+= -O2 -I${INCLUDE}
 LIB=greeklib.a
 RM=rm
 CC=cc
