@@ -37,7 +37,7 @@ char * argv[];
 		fprintf(stderr,"format:%s {ARGS} basename\n", argv[0] );
 		exit(-1);
 	}
-	strcpy(fname,argv[argc-1]);
+	Xstrcpy(fname,argv[argc-1]);
 	rval = strcmp(fname,"formulaX");
 	if( rval) 
 		maintable = 1;

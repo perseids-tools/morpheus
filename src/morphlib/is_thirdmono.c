@@ -147,7 +147,7 @@ diphth_end(char *stem, char *endstring)
 	char tmp[MAXWORDSIZE];
 	char * s;
 	
-	strcpy(tmp,stem);
+	Xstrcpy(tmp,stem);
 	strcat(tmp,endstring);
 	
 	s = getsyll(tmp,ULTIMA);

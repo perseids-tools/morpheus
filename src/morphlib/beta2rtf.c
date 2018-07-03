@@ -97,7 +97,7 @@ conv_defline(char *s, FILE *fout)
 			introp = "\\s5\\fi-539\\li2296\\sb80\\sa80\\tx2296 \\f20";
 		else if( levnum == 9 )  {
 			introp = "\\s9\\sb60\\sa60 \\f20";
-			strcpy(res2,"");
+			Xstrcpy(res2,"");
 		}
 		fprintf(fout,"\\pard\\plain{%s {%s",  introp, res2 );
 

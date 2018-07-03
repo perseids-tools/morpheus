@@ -40,8 +40,8 @@ char * argv[];
                 exit( -1 );
         }
 
-        strcpy( Srch.sname , argv[2] );
-        strcpy( Authname , Srch.sname );
+        Xstrcpy( Srch.sname , argv[2] );
+        Xstrcpy( Authname , Srch.sname );
 
         if( ! TlgOnline( Srch.sname ) ) {
                 fprintf(stderr,"%s not found\n", Srch.sname );

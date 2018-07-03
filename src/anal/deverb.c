@@ -25,15 +25,15 @@ main()
 
 	while(gets(line)) {
 		transkeys[0] = keys[0] = reskeys[0] = 0;
-		strcpy(tmp,line);
+		Xstrcpy(tmp,line);
 		s = line;
 
-		strcpy(curlemma,line);
+		Xstrcpy(curlemma,line);
 		firstkey(curlemma);
 		while(*s&&!isspace(*s)) s++;
 		while(isspace(*s)) *s++ = 0;
 
-		strcpy(needlemma,s);
+		Xstrcpy(needlemma,s);
 		firstkey(needlemma);
 		while(*s&&!isspace(*s)) s++;
 		while(isspace(*s)) *s++ = 0;
@@ -46,10 +46,10 @@ main()
 		while(*s&&!isspace(*s)) s++;
 		if(*s) *s++ = 0;
 		while(isspace(*s)) s++;
-		strcpy(keys,s);
+		Xstrcpy(keys,s);
 		stripquant(p);
 		stripstemsep(p);
-		strcpy(tmpstem,p);
+		Xstrcpy(tmpstem,p);
 /*printf("curlemma [%s] needlemma [%s] tmpstem [%s] keys [%s]\n", curlemma, needlemma, tmpstem, keys );*/
 		rval = testcmpstem(needlemma,tmpstem,reskeys,keys,transkeys);
 
@@ -87,8 +87,8 @@ testcmpstem(char *needlemma,char *stem,char * stemkeys,char* matchkeys,char * tr
 		while(s>stem) {
 			Gstr = BlankGstr;
 			fullprevb[0] = 0;
-			strcpy(half2,s);
-			strcpy(rawprvb,stem);
+			Xstrcpy(half2,s);
+			Xstrcpy(rawprvb,stem);
 			rawprvb[strlen(rawprvb) - strlen(s)] = 0;
 			set_gkstring(&Gstr,half2);
 			if( is_preverb(rawprvb,fullprevb,&Gstr) ) {
@@ -126,7 +126,7 @@ testcmpstem2(char *needlemma,char *stem,char * stemkeys,char* matchkeys,char * t
 	if( ! rval ) {
 		char tmpstem[BUFSIZ];
 		if( *stem == 'h' ) {
-			strcpy(tmpstem,stem);
+			Xstrcpy(tmpstem,stem);
 			tmpstem[0] = 'e';
 			rval=testcmpstem3(needlemma,tmpstem, stemkeys, matchkeys,transkeys);
 			if(rval) {
@@ -154,7 +154,7 @@ testcmpstem3(char*needlemma,char *stem,char * stemkeys,char* matchkeys,char*tran
 
         if( *stem == 'r'  && getbreath(stem) == NOBREATH ) {
 
-		if( *(stem+1) == 'r' ) strcpy(stem,stem+1); /* rr --> r */
+		if( *(stem+1) == 'r' ) Xstrcpy(stem,stem+1); /* rr --> r */
                 Xstrncpy(tmp,"r(",(int)sizeof tmp);
                 Xstrncat(tmp,stem+1,(int)sizeof tmp);
                 Xstrncpy(stem,tmp,BUFSIZ);
@@ -165,7 +165,7 @@ testcmpstem3(char*needlemma,char *stem,char * stemkeys,char* matchkeys,char*tran
 
         if( Is_vowel(*stem) && getbreath(stem) == NOBREATH  && cur_lang() != LATIN ) {
 
-                strcpy(savestem,stem);
+                Xstrcpy(savestem,stem);
 /*
  * check for rough breathing
  */
@@ -174,11 +174,11 @@ testcmpstem3(char*needlemma,char *stem,char * stemkeys,char* matchkeys,char*tran
 		rval = checkvcomp(needlemma,stem, stemkeys,matchkeys);
 		if( rval ) return(rval);
 
-		strcpy(stem,savestem);
+		Xstrcpy(stem,savestem);
                 addbreath(stem,SMOOTHBR);
 		rval = checkvcomp(needlemma,stem, stemkeys,matchkeys);
 		if( rval ) return(rval);
-		strcpy(stem,savestem);
+		Xstrcpy(stem,savestem);
 	}
 	rval = checkvcomp(needlemma,stem, stemkeys,matchkeys);
 	/*if( rval ) printf("%d:[%s] [%s] [%s]\n", rval, stem, stemkeys, matchkeys);*/
@@ -192,18 +192,18 @@ checkvcomp(char * needlemma,char * stem,char * stemkeys,char * matchkeys)
 
 
 	*stemkeys = 0;
-	strcpy(mbuf,matchkeys);
+	Xstrcpy(mbuf,matchkeys);
 
 	rval = chcknstem(stem,stemkeys);
 	if( rval ) rval = comNomstemtypes(needlemma,stem,stemkeys,matchkeys);
 	if( rval ) return(rval);
-	strcpy(matchkeys,mbuf);
+	Xstrcpy(matchkeys,mbuf);
 
 	*stemkeys = 0;
 	rval = chckvstem(stem,stemkeys);
 	if( rval ) rval = comstemtypes1(needlemma,stem,stemkeys,matchkeys);
 	if( rval ) return(NOMMATCH);
-	strcpy(matchkeys,mbuf);
+	Xstrcpy(matchkeys,mbuf);
 
 	*stemkeys = 0;
 	if( ! rval ) rval = checkforderiv(stem, stemkeys);
@@ -211,7 +211,7 @@ checkvcomp(char * needlemma,char * stem,char * stemkeys,char * matchkeys)
 	if( rval ) rval = comstemtypes1(needlemma,stem,stemkeys,matchkeys);
 	if( rval ) return(NOMMATCH);
 	stemkeys[0] = 0;
-	strcpy(matchkeys,mbuf);
+	Xstrcpy(matchkeys,mbuf);
 
 	return(0);
 }
@@ -232,109 +232,109 @@ comNomstemtypes(char * needlemma,char * stem,char * stemkeys,char * matchkeys)
 	int rval = 0;
 
 	tmpkeys[0] =  tmpstem[0] =  0;
-	strcpy(mbuf,matchkeys);
-	strcpy(tmpstem,stemkeys);
+	Xstrcpy(mbuf,matchkeys);
+	Xstrcpy(tmpstem,stemkeys);
 	rval = comstemtypes1(needlemma,stem,stemkeys,mbuf);
 	if( rval ) return( NOMMATCH );
 
 /*printf("stem [%s] stemkeys [%s] mbuf [%s]\n", stem,stemkeys,mbuf );*/
 	if( !strncmp("os_h_on",matchkeys,strlen("os_h_on"))) {
-		strcpy(stemkeys,tmpstem);
-		strcpy(mbuf,"os_ou");
+		Xstrcpy(stemkeys,tmpstem);
+		Xstrcpy(mbuf,"os_ou");
 		rval = comstemtypes1(needlemma,stem,stemkeys,mbuf);
 		if(rval) return(NOMMATCH);
 	}
 	if( !strncmp("os_on",matchkeys,strlen("os_on"))) {
-		strcpy(stemkeys,tmpstem);
-		strcpy(mbuf,"h_hs os_ou a_hs");
+		Xstrcpy(stemkeys,tmpstem);
+		Xstrcpy(mbuf,"h_hs os_ou a_hs");
 		rval = comstemtypes1(needlemma,stem,stemkeys,mbuf);
 		if(rval) return(NOMMATCH);
 
-		strcpy(stemkeys,tmpstem);
-		strcpy(mbuf,"os_h_on");
+		Xstrcpy(stemkeys,tmpstem);
+		Xstrcpy(mbuf,"os_h_on");
 		rval = comstemtypes1(needlemma,stem,stemkeys,mbuf);
 		if(rval) return(ADJMATCH);
 
-		strcpy(stemkeys,tmpstem);
-		strcpy(mbuf,"hs_ou");
+		Xstrcpy(stemkeys,tmpstem);
+		Xstrcpy(mbuf,"hs_ou");
 		rval = comstemtypes1(needlemma,stem,stemkeys,mbuf);
 		if(rval) return(NOMMATCH);
 
-		strcpy(stemkeys,tmpstem);
-		strcpy(mbuf,"hs_eos");
+		Xstrcpy(stemkeys,tmpstem);
+		Xstrcpy(mbuf,"hs_eos");
 		rval = comstemtypes1(needlemma,stem,stemkeys,mbuf);
 		if(rval) return(NOMMATCH);
 
 		if( stem[strlen(stem)-1] == 'm' ) {
 			char tmps[BUFSIZ];
 			
-			strcpy(tmps,stem);
-			strcpy(stemkeys,tmpstem);
+			Xstrcpy(tmps,stem);
+			Xstrcpy(stemkeys,tmpstem);
 			tmps[strlen(tmps)-1] = 0;
-			strcpy(mbuf,"ma_matos");
+			Xstrcpy(mbuf,"ma_matos");
 			rval = comstemtypes1(needlemma,tmps,stemkeys,mbuf);
 			if(rval) return(MAMATCH);
 		}
 
 	}
 	if( !strncmp("os_h_on",matchkeys,strlen("os_h_on"))) {
-		strcpy(stemkeys,tmpstem);
-		strcpy(mbuf,"os_on");
+		Xstrcpy(stemkeys,tmpstem);
+		Xstrcpy(mbuf,"os_on");
 		rval = comstemtypes1(needlemma,stem,stemkeys,mbuf);
 		if(rval) return(ADJMATCH);
 
-		strcpy(stemkeys,tmpstem);
+		Xstrcpy(stemkeys,tmpstem);
 	}
 	if( !strncmp("hs_es",matchkeys,strlen("hs_es"))) {
-		strcpy(stemkeys,tmpstem);
-		strcpy(mbuf,"hs_eos os_ou h_hs a_hs ws_oos");
+		Xstrcpy(stemkeys,tmpstem);
+		Xstrcpy(mbuf,"hs_eos os_ou h_hs a_hs ws_oos");
 		rval = comstemtypes1(needlemma,stem,stemkeys,mbuf);
 		if(rval) return(NOMMATCH2);
 
-		strcpy(stemkeys,tmpstem);
+		Xstrcpy(stemkeys,tmpstem);
 	}
 	if( !strncmp("wn_on",matchkeys,strlen("wn_on"))) {
-		strcpy(stemkeys,tmpstem);
-		strcpy(mbuf,"wn_onos");
+		Xstrcpy(stemkeys,tmpstem);
+		Xstrcpy(mbuf,"wn_onos");
 		rval = comstemtypes1(needlemma,stem,stemkeys,mbuf);
 		if(rval) return(NOMMATCH2);
 
-		strcpy(stemkeys,tmpstem);
+		Xstrcpy(stemkeys,tmpstem);
 	}
 	if( !strncmp("is_idos",matchkeys,strlen("is_idos"))) {
-		strcpy(stemkeys,tmpstem);
+		Xstrcpy(stemkeys,tmpstem);
 	/*
 	 * grc 9/7/94
 	 * note: this allows us to go from is_idos_adj --> is_idos
  	 * as in dusmhn is_idos_adj --> mhn is_idos
 	 */
-		strcpy(mbuf,"is_idos is_ews");
+		Xstrcpy(mbuf,"is_idos is_ews");
 		rval = comstemtypes1(needlemma,stem,stemkeys,mbuf);
 		if(rval) return(NOMMATCH2);
 
-		strcpy(stemkeys,tmpstem);
-		strcpy(mbuf,"h_hs");
+		Xstrcpy(stemkeys,tmpstem);
+		Xstrcpy(mbuf,"h_hs");
 		rval = comstemtypes1(needlemma,stem,stemkeys,mbuf);
 		if(rval) return(NOMMATCH2);
 
-		strcpy(stemkeys,tmpstem);
+		Xstrcpy(stemkeys,tmpstem);
 	}
 	if( !strncmp("us_eia_u",matchkeys,strlen("us_eia_u"))) {
-		strcpy(stemkeys,tmpstem);
-		strcpy(mbuf,"us_uos uLs_uos us_ews");
+		Xstrcpy(stemkeys,tmpstem);
+		Xstrcpy(mbuf,"us_uos uLs_uos us_ews");
 		rval = comstemtypes1(needlemma,stem,stemkeys,mbuf);
 		if(rval) return(NOMMATCH2);
 
-		strcpy(stemkeys,tmpstem);
+		Xstrcpy(stemkeys,tmpstem);
 	}
 		
 	if( !strncmp("oos_oon",matchkeys,strlen("oos_oon"))) {
-		strcpy(stemkeys,tmpstem);
-		strcpy(mbuf,"oos_oou");
+		Xstrcpy(stemkeys,tmpstem);
+		Xstrcpy(mbuf,"oos_oou");
 		rval = comstemtypes1(needlemma,stem,stemkeys,mbuf);
 		if(rval) return(NOMMATCH2);
 
-		strcpy(stemkeys,tmpstem);
+		Xstrcpy(stemkeys,tmpstem);
 	}
 		
 	return(0);
@@ -360,7 +360,7 @@ printf("needlemma [%s] stemkeys [%s] match [%s]\n", needlemma, stemkeys , matchk
 	if(rval && *needlemma) {
 		char * sp;
 		char curbuf[BUFSIZ];
-		strcpy(tmp,needlemma);
+		Xstrcpy(tmp,needlemma);
 		strcat(tmp,":");
 
 		curbuf[0] = 0;
@@ -381,7 +381,7 @@ printf("needlemma [%s] stemkeys [%s] match [%s]\n", needlemma, stemkeys , matchk
 		if( !curbuf[0] ) {
 			return(0);
 		}
-		strcpy(stemkeys,curbuf);
+		Xstrcpy(stemkeys,curbuf);
 	}
 	return(rval);
 }

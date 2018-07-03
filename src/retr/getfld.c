@@ -49,8 +49,8 @@ char *s;
 		while(*t) t++; t--; *t = 0;
 		n = gk_strcmp(s,curl);	
 		if( !n && ! strcmp(s,curl) ) {
-			strcpy( TmpSrch->key , curl );
-			strcpy( TmpSrch->gotstr , curl );
+			Xstrcpy( TmpSrch->key , curl );
+			Xstrcpy( TmpSrch->gotstr , curl );
 /*
 printf("%s = %s at %ld\n", s, curl, curlno );
 */

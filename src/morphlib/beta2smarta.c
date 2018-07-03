@@ -21,7 +21,7 @@
 #define WISUB			0304
 #define IS_CHARSTYLE(S) (*S == '&' && (*(S+1) == '3' || *(S+1) == '1' ))
 #define END_CHARSTYLE(S) if (xlit==SMARTA) 	*S++ = 0253;/* \
-else { strcpy(S,"}"), S ++; }*/
+else { Xstrcpy(S,"}"), S ++; }*/
 
 #define GKFONT "}{\\f132 "
 #define ROMANFONT "}{"
@@ -153,7 +153,7 @@ beta2mac(char *source, char *res, int xlit)
 			}
 			sp = greekfont(sp);
 			if( xlit == SMK ) {
-				strcpy(rp,GKFONT); 
+				Xstrcpy(rp,GKFONT); 
 				rp += Xstrlen(GKFONT);
 			}
 			continue;
@@ -183,9 +183,9 @@ beta2mac(char *source, char *res, int xlit)
 					*rp++ = 0137;
 				else {
 					if( charstyle_flag == ITALIC ) {
-						strcpy(rp,ITALICFONT); rp += Xstrlen(ITALICFONT);
+						Xstrcpy(rp,ITALICFONT); rp += Xstrlen(ITALICFONT);
 					} else {
-						strcpy(rp,BOLDFONT); rp += Xstrlen(BOLDFONT);
+						Xstrcpy(rp,BOLDFONT); rp += Xstrlen(BOLDFONT);
 					}
 				}
 				sp += 2;
@@ -193,7 +193,7 @@ beta2mac(char *source, char *res, int xlit)
 			}
 			sp = romanfont(sp);
 			if( xlit == SMK && ! charstyle_flag && *(rp-1) != '}' ) {
-				strcpy(rp,ROMANFONT);  rp += Xstrlen(ROMANFONT);
+				Xstrcpy(rp,ROMANFONT);  rp += Xstrlen(ROMANFONT);
 			}
 			continue;
 		}
@@ -223,11 +223,11 @@ beta2mac(char *source, char *res, int xlit)
 						*rp++ = EQUALS;
 					else {
 						if( cur_font == GREEK ) {
-							strcpy(rp,ROMANFONT);
+							Xstrcpy(rp,ROMANFONT);
 							rp += Xstrlen(ROMANFONT);
-							strcpy(rp,"=}{");
+							Xstrcpy(rp,"=}{");
 							rp += 3;
-							strcpy(rp,GKFONT);
+							Xstrcpy(rp,GKFONT);
 							rp += Xstrlen(GKFONT);
 						} else
 							*rp++ = '=';
@@ -269,7 +269,7 @@ beta2mac(char *source, char *res, int xlit)
 				*rp++ = UCASEMARKER;
 			} else if (xlit == SMK ) {
 				sp++;
-				strcpy(rp,sp);
+				Xstrcpy(rp,sp);
 				if( islower(*rp) ) *rp = toupper(*rp);
 				rp++;
 			}
@@ -318,7 +318,7 @@ beta2mac(char *source, char *res, int xlit)
 					while(*t&&!isalpha(*t)) t++;
 					if(isalpha(*t) && islower(*t) ) *t = toupper(*t);
 				} else {
-					strcpy(sp,sp+1);
+					Xstrcpy(sp,sp+1);
 					if(islower(*sp)) *sp = toupper(*sp);
 				}
 			} 

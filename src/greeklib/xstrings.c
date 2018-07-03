@@ -38,11 +38,11 @@ Ystrncpy(char *s1, const char *s2, size_t len)
 		}
 		strncpy(p,s2,(size_t)len);
 		*(p+len-1) = 0;
-		strcpy(s1,p);
+		Xstrcpy(s1,p);
 		xFree(p,"Xstrncpy buffer");
 		fprintf(stderr,"%d bytes into %d:%s\n", Xstrlen(s2), len ,s2);
 	} else
-		strcpy(s1,s2);
+		Xstrcpy(s1,s2);
 }
 
 
@@ -75,7 +75,7 @@ Xstrlen(const char *s)
 }
 
 /*
-strcpy(char *s1, const char *s2)
+Xstrcpy(char *s1, const char *s2)
 {
 	while(*s2) {
 		*s1++ = *s2++;

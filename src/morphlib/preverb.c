@@ -195,7 +195,7 @@ rstprevb(char *word, char *prevb, gk_string *gstr)
 	   if( !has_morphflag(oddpb,RAW_PREVERB) ) {
 		char * t;
 
-		strcpy(work,prevb);
+		Xstrcpy(work,prevb);
 		t = work+strlen(work)-1;
 
 		if( !strcmp(prevb,"circum") && *word == 'i' ) {
@@ -203,12 +203,12 @@ rstprevb(char *word, char *prevb, gk_string *gstr)
 		}
 
 		if( has_morphflag(oddpb,D_PREVB) ) {
-			strcpy(work,prevb);
+			Xstrcpy(work,prevb);
 			strcat(work,"d");
 		}
 
 		if( has_morphflag(oddpb,T_PREVB) && !strcmp(prevb,"re") ) {
-			strcpy(work,"ret");
+			Xstrcpy(work,"ret");
 		}
 
 		if( !strcmp(prevb,"sub") || !strcmp(prevb,"ob") ) {
@@ -349,7 +349,7 @@ rstprevb(char *word, char *prevb, gk_string *gstr)
 	
 		
 		strcat(work,word);
-		strcpy(word,work);
+		Xstrcpy(word,work);
 		return;
 	   }
 	}
@@ -674,7 +674,7 @@ shift_eis_to_es(char *s)
 {
 	while(*s) {
 		if(!Xstrncmp(s,"eis",3) || !Xstrncmp(s,"ei)s",4) ) {
-			strcpy(s+1,s+2);
+			Xstrcpy(s+1,s+2);
 			return;
 		}
 		s++;
@@ -686,8 +686,8 @@ shift_pros_to_poti(char *s)
 	
 	while(*s) {
 		if(!Xstrncmp(s,"pros",4) ) {
-			strcpy(tmp,s+4);
-			strcpy(s,"poti");
+			Xstrcpy(tmp,s+4);
+			Xstrcpy(s,"poti");
 			strcat(s,tmp);
 			return;
 		}
@@ -700,8 +700,8 @@ shift_pros_to_proti(char *s)
 	
 	while(*s) {
 		if(!Xstrncmp(s,"pros",4) ) {
-			strcpy(tmp,s+4);
-			strcpy(s,"proti");
+			Xstrcpy(tmp,s+4);
+			Xstrcpy(s,"proti");
 			strcat(s,tmp);
 			return;
 		}
@@ -714,13 +714,13 @@ shift_upo_to_upai(char *s)
 	
 	while(*s) {
 		if(!Xstrncmp(s,"upo",3) ) {
-			strcpy(tmp,s+3);
-			strcpy(s,"upai");
+			Xstrcpy(tmp,s+3);
+			Xstrcpy(s,"upai");
 			strcat(s,tmp);
 			return;
 		} else if(!Xstrncmp(s,"u(po",4) ) {
-			strcpy(tmp,s+4);
-			strcpy(s,"u(pai");
+			Xstrcpy(tmp,s+4);
+			Xstrcpy(s,"u(pai");
 			strcat(s,tmp);
 			return;
 		}
@@ -733,13 +733,13 @@ shift_uper_to_upeir(char *s)
 	
 	while(*s) {
 		if(!Xstrncmp(s,"uper",4) ) {
-			strcpy(tmp,s+4);
-			strcpy(s,"upeir");
+			Xstrcpy(tmp,s+4);
+			Xstrcpy(s,"upeir");
 			strcat(s,tmp);
 			return;
 		} else if(!Xstrncmp(s,"u(per",5) ) {
-			strcpy(tmp,s+5);
-			strcpy(s,"u(peir");
+			Xstrcpy(tmp,s+5);
+			Xstrcpy(s,"u(peir");
 			strcat(s,tmp);
 			return;
 		}
@@ -752,8 +752,8 @@ shift_para_to_parai(char *s)
 	
 	while(*s) {
 		if(!Xstrncmp(s,"para",4) ) {
-			strcpy(tmp,s+4);
-			strcpy(s,"parai");
+			Xstrcpy(tmp,s+4);
+			Xstrcpy(s,"parai");
 			strcat(s,tmp);
 			return;
 		} 
@@ -766,8 +766,8 @@ shift_meta_to_peda(char *s)
 	
 	while(*s) {
 		if(!Xstrncmp(s,"meta",4) ) {
-			strcpy(tmp,s+4);
-			strcpy(s,"peda");
+			Xstrcpy(tmp,s+4);
+			Xstrcpy(s,"peda");
 			strcat(s,tmp);
 			return;
 		}
@@ -780,14 +780,14 @@ shift_en_to_eni(char *s)
 	
 	while(*s) {
 		if(!Xstrncmp(s,"e)n",3) && Xstrncmp(s,"e)ni",4)) {
-			strcpy(tmp,s+3);
-			strcpy(s,"e)ni");
+			Xstrcpy(tmp,s+3);
+			Xstrcpy(s,"e)ni");
 			strcat(s,tmp);
 			return;
 		}
 		if(!Xstrncmp(s,"en",2) && Xstrncmp(s,"eni",3)) {
-			strcpy(tmp,s+2);
-			strcpy(s,"eni");
+			Xstrcpy(tmp,s+2);
+			Xstrcpy(s,"eni");
 			strcat(s,tmp);
 			return;
 		}

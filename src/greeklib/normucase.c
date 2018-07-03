@@ -32,7 +32,7 @@ normucase(char *word)
  	 * word now "E(/ellhn"
 	 */
 	t = s+1;
-	strcpy(s,t);
+	Xstrcpy(s,t);
 	/*
  	 * word now "E(/llhn"
 	 */

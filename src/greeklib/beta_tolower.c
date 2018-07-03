@@ -22,6 +22,6 @@ beta_tolower(char *word)
 	s = word;
 	while(!isalpha(*s)&&*s) s++;
 	*word = *s;
-	strcpy(s,s+1);
+	Xstrcpy(s,s+1);
 
 }

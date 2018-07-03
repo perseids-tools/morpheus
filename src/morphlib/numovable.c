@@ -6,7 +6,7 @@ takes_nu_movable(gk_string *gstr)
 {
 	char tmp[MAXWORDSIZE];
 	char * s = tmp;
-	strcpy(tmp,gkstring_of(gstr));
+	Xstrcpy(tmp,gkstring_of(gstr));
 
 /*
  * grc 7/22/89

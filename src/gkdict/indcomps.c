@@ -22,7 +22,7 @@ main()
 
         while(gets(line)) {
 		Gstr = Blnk;
-		if( !strncmp(":le:",line,4) ) strcpy(curlemma,line+4);
+		if( !strncmp(":le:",line,4) ) Xstrcpy(curlemma,line+4);
 		if( strncmp(":aj:",line,4) &&  strncmp(":no:",line,4) ) {
 			continue;
 		}

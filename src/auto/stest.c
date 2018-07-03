@@ -28,7 +28,7 @@ main()
 	   }
 	   else  {
 		    		qline = malloc( strlen(cline) + 1);
-				strcpy( qline,cline);
+				Xstrcpy( qline,cline);
 				if ( spush( &qline,stack) == FAILURE) 
 				printf("stack full\n");
 		}

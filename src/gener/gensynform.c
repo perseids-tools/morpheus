@@ -48,7 +48,7 @@ static int print_mode = FULL_DUMP;
 	while( fgets(line,sizeof line,f ) ) {
 		char saveline[BUFSIZ*2];
 
-		strcpy(saveline,line);
+		Xstrcpy(saveline,line);
 
 		showdialect = 0;
 		if( is_blank(line) ) {
@@ -464,8 +464,8 @@ printf("formcnt=%d\n", formcnt);
 	if( print_mode == MORPH_INFO ) {
 		char tmplem[BUFSIZ];
 
-		strcpy(tmp,workword_of(gkform));
-		strcpy(tmplem,lemma_of(gkform));
+		Xstrcpy(tmp,workword_of(gkform));
+		Xstrcpy(tmplem,lemma_of(gkform));
 		stripmetachars(tmp);
 		stripdiaer(tmp);
 		standalpha(tmplem);
@@ -474,7 +474,7 @@ printf("formcnt=%d\n", formcnt);
 		if( strcmp(tmp,tmplem)) {
 			char tmp2[BUFSIZ];
 
-			strcpy(tmp2,workword_of(gkform));
+			Xstrcpy(tmp2,workword_of(gkform));
 			standalpha(tmp2);
 			stripmetachars(tmp2);
 			stripdiaer(tmp2);
@@ -641,7 +641,7 @@ register char * s;
 {
 	while(*s) {
 		if( *s == '-' ) {
-			strcpy(s,s+1);
+			Xstrcpy(s,s+1);
 			continue;
 		}
 		s++;
@@ -653,7 +653,7 @@ register char * s;
 {
 	while(*s) {
 		if( *s == '!' ) {
-			strcpy(s,s+1);
+			Xstrcpy(s,s+1);
 			continue;
 		}
 		s++;
@@ -704,8 +704,8 @@ is_exception(char *s1, char * s2)
 {
 	char tmp1[BUFSIZ], tmp2[BUFSIZ];
 
-	strcpy(tmp1,s1);
-	strcpy(tmp2,s2);
+	Xstrcpy(tmp1,s1);
+	Xstrcpy(tmp2,s2);
 
 	/* 
  	 * if one ends in oos or ous, see if the other does too 

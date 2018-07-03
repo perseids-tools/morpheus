@@ -71,7 +71,7 @@ cntlems(gk_word *Gkword )
 		if( strcmp(prevlem,lemma_of(Anal))) {
 			cnt++;
 		}
-		strcpy(prevlem,lemma_of(Anal));
+		Xstrcpy(prevlem,lemma_of(Anal));
 	}
 	return(cnt);
 }
@@ -110,7 +110,7 @@ checkstring1(gk_word *Gkword)
 		if( ! n /* && ! hasaccent(savework) */) {
 			char tmp[MAXWORDSIZE];
 			
-			strcpy(tmp,savework);
+			Xstrcpy(tmp,savework);
 			if( hasaccent(tmp) ) stripacc(tmp);
 			set_workword(Gkword,"e)/");
 			Xstrncat(workword_of(Gkword),tmp+1,MAXWORDSIZE);
@@ -438,7 +438,7 @@ checkstring3(gk_word *Gkword)
        cmpend(workword_of(Gkword),"emst",workword) ||
        cmpend(workword_of(Gkword),"omst",workword))
     {
-      strcpy(workword,workword_of(Gkword));
+      Xstrcpy(workword,workword_of(Gkword));
       workword[strlen(workword)-2] = 0;
       set_workword(Gkword,workword);
       rval = checkstring3(Gkword);
@@ -452,7 +452,7 @@ checkstring3(gk_word *Gkword)
 /* ...us + est written as ...ust */
     if (cmpend(workword_of(Gkword), "ust", workword))
     {
-      strcpy(workword, workword_of(Gkword)); 
+      Xstrcpy(workword, workword_of(Gkword)); 
       workword[strlen(workword) - 1] = 0;
       set_workword(Gkword,workword);
       rval = checkstring3(Gkword);
@@ -468,7 +468,7 @@ checkstring3(gk_word *Gkword)
     if (cmpend(workword_of(Gkword), "ist", workword) ||
 	cmpend(workword_of(Gkword), "ost", workword))
     {
-      strcpy(workword, workword_of(Gkword));
+      Xstrcpy(workword, workword_of(Gkword));
       workword[strlen(workword) - 1] = 0;	/* try -is first */
       set_workword(Gkword,workword);
       workval = checkstring3(Gkword);
@@ -496,7 +496,7 @@ checkstring3(gk_word *Gkword)
     {
       if (cmpend(workword_of(Gkword), "n", workword))
       {
-        strcpy(workword, workword_of(Gkword));
+        Xstrcpy(workword, workword_of(Gkword));
         workword[strlen(workword) - 1] = 's';	/* ...s-ne -> ...n */
         set_workword(Gkword, workword);
         workval = checkstring3(Gkword);
@@ -576,7 +576,7 @@ checkstring3(gk_word *Gkword)
    */
   if( cur_lang() == LATIN ) {
     char * a = workword;
-    strcpy(workword,saveword);
+    Xstrcpy(workword,saveword);
     if( u2v(workword) ) {
       set_workword(Gkword,workword);
       rval = checkstring3(Gkword);
@@ -585,13 +585,13 @@ checkstring3(gk_word *Gkword)
 	return(rval);
       }
     }
-    strcpy(workword,saveword);
+    Xstrcpy(workword,saveword);
   }
   /* If we're out of ideas in Italian, turn all u's to v's. */
   else if ( (cur_lang() == ITALIAN) && !totanal_of(Gkword)) {
     char *a;
 
-    strcpy(workword,saveword);
+    Xstrcpy(workword,saveword);
 
     for (a = workword, acount = 0; *a != '\0'; a++) {
       if (*a == 'U') {
@@ -613,7 +613,7 @@ checkstring3(gk_word *Gkword)
       }      
     }
 
-    strcpy(workword,saveword);
+    Xstrcpy(workword,saveword);
   }
 
   /*
@@ -628,7 +628,7 @@ checkstring3(gk_word *Gkword)
    */
   if( cur_lang() == LATIN ) {
     char * a = workword;
-    strcpy(workword,saveword);
+    Xstrcpy(workword,saveword);
 
     if( *a == 'I' ) {
       *a = 'J';
@@ -672,7 +672,7 @@ checkstring3(gk_word *Gkword)
       char* p_word = NULL;
       char* p_tail = NULL;
       char* p_start = NULL;
-      strcpy(workword, workword_of(Gkword));
+      Xstrcpy(workword, workword_of(Gkword));
       p_word = workword;
       p_word += 2;
       switch (*p_word)

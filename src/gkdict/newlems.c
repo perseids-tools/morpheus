@@ -11,15 +11,15 @@ main()
 	char *hp;
 
 	while(gets(line)) {
-		strcpy(savel,line);
+		Xstrcpy(savel,line);
 		hp = strtok(line," \t");
 		if( ! hp ) continue;
 		hp = strchr(line,'-');
-		strcpy(curw,line);
+		Xstrcpy(curw,line);
 		if(hp==line) buildw(curw,half1,line);
 /*sprintf(curw,"%s%s", half1, line);*/
 		else if( hp) {
-			strcpy(half1,line);
+			Xstrcpy(half1,line);
 			half1[hp-line] = 0;
 			stripacc(half1);
 		}
@@ -45,7 +45,7 @@ checkcurw(char*curw)
 	char keybuf[BUFSIZ];
 	int rval = 0;
 	
-	strcpy(tmp,curw);
+	Xstrcpy(tmp,curw);
 	keybuf[0] = 0;
 
 	stripmetachars(tmp);

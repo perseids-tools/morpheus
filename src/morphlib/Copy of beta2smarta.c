@@ -20,7 +20,7 @@
 #define HISUB			0372
 #define WISUB			0304
 #define END_ITALIC(S) if (xlit==SMARTA) 	*S++ = 0253;/* \
-else { strcpy(S,"}"), S ++; }*/
+else { Xstrcpy(S,"}"), S ++; }*/
 
 #define GKFONT "}{\\f132 "
 #define ROMANFONT "}{"
@@ -137,7 +137,7 @@ beta2mac(char *source, unsigned char *res, int xlit)
 			}
 			sp = greekfont(sp);
 			if( xlit == SMK ) {
-				strcpy(rp,GKFONT); rp += strlen(GKFONT);
+				Xstrcpy(rp,GKFONT); rp += strlen(GKFONT);
 			}
 			continue;
 		} else if( *sp == '&' ) {
@@ -176,14 +176,14 @@ beta2mac(char *source, unsigned char *res, int xlit)
 				if( xlit == SMARTA ) 
 					*rp++ = 0137;
 				else {
-					strcpy(rp,ITALICFONT); rp += strlen(ITALICFONT);
+					Xstrcpy(rp,ITALICFONT); rp += strlen(ITALICFONT);
 				}
 				sp += 2;
 				while(isspace(*sp)) sp++;
 			}
 			sp = romanfont(sp);
 			if( xlit == SMK && ! italic_flag && *(rp-1) != '}' ) {
-				strcpy(rp,ROMANFONT);  rp += strlen(ROMANFONT);
+				Xstrcpy(rp,ROMANFONT);  rp += strlen(ROMANFONT);
 			}
 			continue;
 		}
@@ -234,7 +234,7 @@ beta2mac(char *source, unsigned char *res, int xlit)
 				*rp++ = UCASEMARKER;
 			} else if (xlit == SMK ) {
 				sp++;
-				strcpy(rp,sp);
+				Xstrcpy(rp,sp);
 				if( islower(*rp) ) *rp = toupper(*rp);
 				rp++;
 			}
@@ -283,7 +283,7 @@ beta2mac(char *source, unsigned char *res, int xlit)
 					while(*t&&!isalpha(*t)) t++;
 					if(isalpha(*t) && islower(*t) ) *t = toupper(*t);
 				} else {
-					strcpy(sp,sp+1);
+					Xstrcpy(sp,sp+1);
 					if(islower(*sp)) *sp = toupper(*sp);
 				}
 			} 

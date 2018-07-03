@@ -143,10 +143,10 @@ index_stems(int wantstem, int wantirrverb, int wantindecl, char *wlist, char *in
 		}
 		if( line[0] == '@' ) {
 			if( ! basename[0] ) continue;
-			strcpy(tmp,basename);
+			Xstrcpy(tmp,basename);
 			strcat(tmp," ");
 			strcat(tmp,line+1);
-			strcpy(line,tmp);
+			Xstrcpy(line,tmp);
 		}
 		/*
 		 * the stem index does not include compound
@@ -165,7 +165,7 @@ index_stems(int wantstem, int wantirrverb, int wantindecl, char *wlist, char *in
 			strncpy(tag,line,4);
 			if( ! strncmp(line,":aj:",4) || ! strncmp(line,":no:",4) ) {
 				char * t = basename;
-				strcpy(basename,line);
+				Xstrcpy(basename,line);
 				while(*t&&!isspace(*t)) t++;
 				while(isspace(*t)) t++;
 				while(*t&&!isspace(*t)) t++;
@@ -276,8 +276,8 @@ if( ! (i % 5000 ) ) printf("processing %ld: %s\n", i , *(table+i) );
 			 * where the same key is repeated
 			 */
 			fprintf(foutput,"%s%s", DELIMITER, *(table+i) );
-		strcpy(prevtag,curtag);
-		strcpy(prevkey,*(table+i));
+		Xstrcpy(prevtag,curtag);
+		Xstrcpy(prevkey,*(table+i));
 	}
 fprintf(stderr,"done with i=%ld, %ld\n", i , stemcount-i);
 	fclose(foutput);
@@ -314,7 +314,7 @@ add_newstemkey(char *s)
 		return(0);
 	}
 	*(sptr) = 0;
-	strcpy(*(stems+stemcount),s);
+	Xstrcpy(*(stems+stemcount),s);
 	while(*sptr) {
 		sptr++;
 		bufcount++;
@@ -356,7 +356,7 @@ if(preverb_of(&GkWord)[0] )
 	stripstemsep(curstem);
 	stripshortmark(curstem);
 	if( has_quant(curstem) || has_diaeresis(curstem) || hasaccent(curstem)) {
-		strcpy(markedstem,curstem);
+		Xstrcpy(markedstem,curstem);
 		stripquant(curstem);
 		stripacc(curstem);
 	} else
@@ -387,9 +387,9 @@ dumpaccstem(char *prefix, char *curstem, char *markedstem, char *curlemma, gk_st
 	char tmpstem[MAXWORDSIZE];
 
 	if( * markedstem ) 
-		strcpy(tmpstem,markedstem);
+		Xstrcpy(tmpstem,markedstem);
 	else 
-		strcpy(tmpstem,curstem);
+		Xstrcpy(tmpstem,curstem);
 
 	
 	if((p=getsyll(tmpstem,syllnum)) == P_ERR)
@@ -398,13 +398,13 @@ dumpaccstem(char *prefix, char *curstem, char *markedstem, char *curlemma, gk_st
 	 addaccent(tmpstem,ACUTE,p);
 /*	
 	if( * markedstem ) {
-		strcpy(tmpmarked,tmpstem);
+		Xstrcpy(tmpmarked,tmpstem);
 		stripquant(tmpstem);
 	} else {
 		tmpmarked[0] = 0;
 	}
 */
-	strcpy(tmpmarked,tmpstem);
+	Xstrcpy(tmpmarked,tmpstem);
 	stripquant(tmpstem);
 	stripdiaer(tmpstem);
 	stripacc(tmpstem);
@@ -429,8 +429,8 @@ dump_curstem(char *prefix, char *curstem, char *markedstem, char *curlemma, gk_s
 			if( * markedstem ) {
 				set_gkstring(&TmpGstr,markedstem);
 				add_numovable(&TmpGstr);
-				strcpy(unmarked,gkstring_of(&TmpGstr));
-				strcpy(tmpmarked,gkstring_of(&TmpGstr));
+				Xstrcpy(unmarked,gkstring_of(&TmpGstr));
+				Xstrcpy(tmpmarked,gkstring_of(&TmpGstr));
 				stripquant(unmarked);
 				stripacc(unmarked);
 				stripdiaer(unmarked);
@@ -438,7 +438,7 @@ dump_curstem(char *prefix, char *curstem, char *markedstem, char *curlemma, gk_s
 				tmpmarked[0] = 0;
 				set_gkstring(&TmpGstr,curstem);
 				add_numovable(&TmpGstr);
-				strcpy(unmarked,gkstring_of(&TmpGstr));
+				Xstrcpy(unmarked,gkstring_of(&TmpGstr));
 				stripquant(unmarked);
 				stripacc(unmarked);
 				stripdiaer(unmarked);

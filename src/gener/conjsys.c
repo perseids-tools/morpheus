@@ -45,7 +45,7 @@ int conjmode;
 	fullconj = conjmode;
 	
 	while(fgets(linebuf,sizeof linebuf,fin) ) {
-		strcpy(saveline,linebuf);
+		Xstrcpy(saveline,linebuf);
 		if( !strncmp(linebuf,"@fullconj",strlen("@fullconj")) )  {
 			fullconj = 1;
 			continue;
@@ -72,7 +72,7 @@ int conjmode;
 		if( has_pref(linebuf,":vs:" ) ) {
 		 	wantpparts = 0;
 		 	derivbuf[0] = 0;
-		 	strcpy(vsbuf,linebuf);
+		 	Xstrcpy(vsbuf,linebuf);
 		 	fprintf(fout,"%s", linebuf );
 		 	continue;
 		}
@@ -94,9 +94,9 @@ int conjmode;
 			wantpparts = 1;
 			if( linebuf[strlen(linebuf)-1] == '\n' )
 					linebuf[strlen(linebuf)-1] = 0;
-			strcpy(origline,linebuf);
+			Xstrcpy(origline,linebuf);
 			nextkey(linebuf,stembuf);
-			strcpy(stembuf,stembuf+4);
+			Xstrcpy(stembuf,stembuf+4);
 			nextkey(linebuf,globalkeys);
 			/*
 			 * keys that are attached directly to the derivstr are inherited by
@@ -160,7 +160,7 @@ int conjmode;
 				char *s;
 				
 				fprintf(fout,"%s", linebuf );
-				strcpy(cobuf,linebuf);
+				Xstrcpy(cobuf,linebuf);
 				s = cobuf;
 				while(*s&&!isspace(*s)) s++;
 				while(isspace(*s))s++;
@@ -170,8 +170,8 @@ int conjmode;
 				len = strlen(linebuf);
 				if( linebuf[len-1] == '\n'); linebuf[len-1] = 0;
 
-				strcpy(tkeys, linebuf+1 );
-				strcpy(savekeys,linebuf+1);
+				Xstrcpy(tkeys, linebuf+1 );
+				Xstrcpy(savekeys,linebuf+1);
 				s = savekeys; 
 				while(*s&&!isspace(*s)) s++; 
 				if( isspace(*s) ) *(s++) = 0;
@@ -251,7 +251,7 @@ set_newlemma(s)
 char *s;
 {
 	*(s+strlen(s)-1) = 0;
-	strcpy(curlemma,s+4);
+	Xstrcpy(curlemma,s+4);
 	derivbuf[0] = 0;
 }
 
@@ -264,7 +264,7 @@ char * s;
 	
 	if(is_empty(s) ) return(1);
 	
-	strcpy(buf1,s);
+	Xstrcpy(buf1,s);
 	nextkey(buf1,buf2);
 	
 	if( ! buf2[0] ) return(1);
@@ -318,7 +318,7 @@ char *s;
 			if(*s ==',') s++;
 		}
 	}
-	strcpy(tmpkeys,s);
+	Xstrcpy(tmpkeys,s);
 	s = tmpkeys;
 	
 	while(*s&&!isspace(*s)) {
@@ -378,7 +378,7 @@ FILE * fout;
 	fprintf(fout,"-%s", s );
 	if( fullconj ) return(1);
 	
-	strcpy(tmpglobs,vsbuf);
+	Xstrcpy(tmpglobs,vsbuf);
 	p = tmpglobs;
 	while(*p&&!isspace(*p)) p++;
 	while(isspace(*p)) p++;
@@ -386,7 +386,7 @@ FILE * fout;
 		if(*p==',') *p = ' ';
 		p++;
 	}
-	strcpy(tmpvsbuf1,tmpglobs);
+	Xstrcpy(tmpvsbuf1,tmpglobs);
 	*p = 0;
 	
 	ScanAsciiKeys(s+1,&TmpGkword,&CurGstr,NULL);
@@ -434,7 +434,7 @@ char * s;
 */
 	if( fullconj ) return(1);
 	
-	strcpy(tmpglobs,cobuf);
+	Xstrcpy(tmpglobs,cobuf);
 	p = tmpglobs;
 	while(*p&&!isspace(*p)) p++;
 	while(isspace(*p)) p++;
@@ -442,7 +442,7 @@ char * s;
 		if(*p==',') *p = ' ';
 		p++;
 	}
-	strcpy(tmpcobuf1,tmpglobs);
+	Xstrcpy(tmpcobuf1,tmpglobs);
 	*p = 0;
 	sprintf(tmpcobuf2,"%s%s", tmpglobs,s+1);
 	

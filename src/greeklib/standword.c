@@ -88,7 +88,7 @@ standword(char *word)
 			a++;
 	}
 	*b = 0;
-	strcpy(word,tmp);
+	Xstrcpy(word,tmp);
 }
 
 zap2acc(s)
@@ -99,7 +99,7 @@ char *s;
 	while(*s) {
 		if(*s == ACUTE || *s == GRAVE || *s == CIRCUMFLEX ) {
 			if( haveacc ) {
-				strcpy(s,s+1);
+				Xstrcpy(s,s+1);
 				continue;
 			}
 			haveacc = 1;				
@@ -112,7 +112,7 @@ striphyph(char *s)
 {
 	while(*s) {
 		if(*s=='-' ) {
-			strcpy(s,s+1);
+			Xstrcpy(s,s+1);
 			if( !*s ) break;
 		}
 		s++;

@@ -50,7 +50,7 @@ GenDictEntry(Gkword,dentry)
 
 	stripmetachars(workword_of(gkforms));
 /*	printf("workword:%s\n", workword_of(gkforms) );*/
-	strcpy(dentry,workword_of(gkforms));
+	Xstrcpy(dentry,workword_of(gkforms));
 	FreeGkword(gkforms);
 }
 
@@ -131,7 +131,7 @@ gk_word *
 /*
 	Xstrncpy(stemkeys,keys,LONGSTRING);
 */
-	strcpy(stemkeys,keys);
+	Xstrcpy(stemkeys,keys);
 
 /*
  * ok, we want to process the keys associated with this stem, and then

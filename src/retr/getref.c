@@ -48,7 +48,7 @@ printf("Hah! got a range:[%s]\n", p );
 				 * be a reference of some kind
 				 */
 				if( isdigit(*p) ) {
-				    strcpy( SecSrch.Print_ref , p );
+				    Xstrcpy( SecSrch.Print_ref , p );
 printf("SecSrch:%s\n", SecSrch.Print_ref );
 				    if( SetRefFromString(&SecSrch) < 0 ) {
 					printf("could not find ref %s in work number %d of %s\n", SecSrch.Print_ref , SecSrch.recwknum , SecSrch.sname );
@@ -64,7 +64,7 @@ printf("p is reference:%s\n", p );
 				 */
 				SecSrch.l_start = SecSrch.pstart;
 				SecSrch.l_len = SecSrch.pend - SecSrch.pstart;
-				strcpy(SecSrch.key,p);
+				Xstrcpy(SecSrch.key,p);
 printf("SecSrch.key:%s\n", SecSrch.key );
 /*
 				ScanAuthor(&SecSrch);
@@ -78,7 +78,7 @@ printf("sec range pend:%ld\n", SecSrch.pend );
 	    } else switch(i) {
 		case 0:
 			printf("will prompt for argument\n");
-			strcpy(srch->sname,p);
+			Xstrcpy(srch->sname,p);
 printf("sname1:%s\n", srch->sname );
 			break;
 		case 1:	/* browse author work  OR */
@@ -94,7 +94,7 @@ printf("sname2:%s\n", srch->sname );
 			 * first work that you want
 			 */
 				workbynum(srch,1);
-				strcpy( srch->Print_ref , p );
+				Xstrcpy( srch->Print_ref , p );
 printf("refstring:%s\n", srch->Print_ref );
 				SetRefFromString(srch);
 				have_reference++;
@@ -107,7 +107,7 @@ printf("got worknumber:%d\n", srch->recwknum );
 			break;
 		case 2:
 			if( ! have_reference ) {
-				strcpy( srch->Print_ref , p );
+				Xstrcpy( srch->Print_ref , p );
 				SetRefFromString(srch);
 				have_reference++;
 			} 
@@ -121,7 +121,7 @@ save_from_to(srch,srch->pstart,srch->pend+1);
 
 			srch->l_start = srch->pstart;
 			srch->l_len = srch->pend - srch->pstart;
-			strcpy(srch->key,p);
+			Xstrcpy(srch->key,p);
 printf("srch->key:%s\n", srch->key );
 /*
 			ScanAuthor(srch);

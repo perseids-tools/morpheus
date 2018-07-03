@@ -10,7 +10,7 @@ main()
 
 	while(gets(line)) {
 		if( !strncmp(":le:",line,4)) {
-			strcpy(curlemma,line+4);
+			Xstrcpy(curlemma,line+4);
 			continue;
 		}
 		if( strncmp(":no:",line,4) && strncmp(":wd:",line,4) &&  strncmp(":aj:",line,4) ) continue;

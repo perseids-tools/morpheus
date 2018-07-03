@@ -49,7 +49,7 @@ main()
 	    }
 	    else  {
 		qline = malloc( strlen(cline) + 1);
-		strcpy( qline, cline);
+		Xstrcpy( qline, cline);
 		if ( qadd( &qline, queue ) == FAILURE )
 		    printf("queue full\n");
 	    }

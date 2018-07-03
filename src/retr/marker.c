@@ -552,7 +552,7 @@ char *
                 while( DELIMITER( *s ) && *s )
                         s++;
         }
-        strcpy( remainder , s );
+        Xstrcpy( remainder , s );
 	return(1);
 }
 
@@ -963,12 +963,12 @@ printf("rval:%d in comparing ", rval ); printsect(tmpRef,0); printf(" and ");pri
 {
         char part1[256], part2[256];
         char * p2 = part2;
-        strcpy(part2,s+index);
-        strcpy(s+index,"$1");
+        Xstrcpy(part2,s+index);
+        Xstrcpy(s+index,"$1");
         while(*s) s++;
 
         while(!WHITE(*p2)) 
                 *s++ = *p2++;
         *s++ = '$';
-        strcpy(s,p2);
+        Xstrcpy(s,p2);
 }

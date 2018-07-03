@@ -42,23 +42,23 @@ printf("%d:[%s] [%s]\n", rval, line ,destPath );
 		foutput = stdout;
 		ffailed = stdout;
 	} else {
-		strcpy(fname,argv[1]);
-		strcpy(inpname,fname);
+		Xstrcpy(fname,argv[1]);
+		Xstrcpy(inpname,fname);
 		strcat(inpname,".words");
 		
 /*
 		fprintf(stderr,"destination directory? (press return for same as source)");
 */
 		if (argc == 3) {
-			strcpy(destPath,argv[2]);
-			strcpy(outname,destPath);
+			Xstrcpy(destPath,argv[2]);
+			Xstrcpy(outname,destPath);
 			strcat(outname,":");
 			strcat(outname,fname);
 			strcat(outname,".morph");
 		} else {
-			strcpy(outname,fname);
+			Xstrcpy(outname,fname);
 			strcat(outname,".morph");
-			strcpy(failedname,fname);
+			Xstrcpy(failedname,fname);
 			strcat(failedname,".failed");
 		}
 		 
@@ -96,7 +96,7 @@ printf("%d:[%s] [%s]\n", rval, line ,destPath );
 */
 /*
 		printf("%s %s %d\n", line, prevl , dictstrcmp(line,prevl) );
-		strcpy(prevl,line);
+		Xstrcpy(prevl,line);
 		continue;
 */		
 
@@ -133,7 +133,7 @@ printf("%d:[%s] [%s]\n", rval, line ,destPath );
 			if( string_time >= long_time && nwords > 0 && rval ) {
 			
 				long_time = string_time;
-				strcpy(long_string,line);
+				Xstrcpy(long_string,line);
 				fprintf(stderr,":longtime\t%.2f\t%s\n", long_time, long_string );
 			}
 		}

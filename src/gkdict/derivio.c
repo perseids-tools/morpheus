@@ -120,9 +120,9 @@ printf("checking [%s] [%s] [%s]\n", stemstr , gkstring_of(tstemtab[i]) , tmpkeys
 		Xstrncpy(tempstem,gkstring_of(tstemtab[i]),(int)sizeof tempstem );
 
 		if( has_morphflag(morphflags_of(tstemtab[i]),SYLL_AUGMENT)  ) 
-			strcpy(had_redupl,"syll_aug");
+			Xstrcpy(had_redupl,"syll_aug");
 		else
-			strcpy(had_redupl,"temp_aug");
+			Xstrcpy(had_redupl,"temp_aug");
 /*
  * grc 3/21/91
  *
@@ -295,7 +295,7 @@ checkcomderiv(char *derivstr, char *defstem, char *suffix, char *lkeys, char *rk
 			 * that we have labelled the long alpha:  a)_kolouqhs-
 			 */
 						markedstem++;
-						strcpy(tmpdstem,redupstem);
+						Xstrcpy(tmpdstem,redupstem);
 						tmpsuff = "";
 					} else
 						simpleredupit(tmpdstem,NO,'e');	
@@ -377,7 +377,7 @@ checkcomderiv2(char *asuffkeys, char *dstem, char *dstemkeys, char *suffix, char
 			s++;
 			while(*s&&*s!=':') s++;
 			if(*s) s++;
-			strcpy(derivsuff,s);
+			Xstrcpy(derivsuff,s);
 			p = derivsuff;
 			while(*p) {
 				if( *p == ':' ) *p = ' ';
@@ -573,7 +573,7 @@ add_deriv_cache(char *s, char *keys)
 		cache_keys[badindex] = NULL;
 	} else {
 		cache_keys[badindex] = (char *)malloc((size_t)Xstrlen(keys)+1);
-		strcpy(cache_keys[badindex],keys);
+		Xstrcpy(cache_keys[badindex],keys);
 	}
 	badindex++;
 }

@@ -11,13 +11,13 @@ FILE * f;
 	char stemkeys[LONGSTRING];
 	int rval = 0;
 	
-	strcpy(tmp,s);
+	Xstrcpy(tmp,s);
 	p = tmp;
 	while(*p) p++;
 	p--;
 	
 	if( isdigit(*s) ) return;
-	strcpy(endkeys,"os_ou os_h_on os_on h_hs a_hs");
+	Xstrcpy(endkeys,"os_ou os_h_on os_on h_hs a_hs");
 	while(p>tmp) {
 		if( *p == 'o' || *p == 'h' ) {
 			*p = 0;

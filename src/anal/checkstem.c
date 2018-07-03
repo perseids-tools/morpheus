@@ -250,13 +250,13 @@ char * s;
 	char stemkeys[1024];
 	int rval = 0;
 	
-	strcpy(tmp,s);
+	Xstrcpy(tmp,s);
 	stemkeys[0] = 0;
 	p = tmp;
 	
 	while(*p) p++; p--;
 	while(p>=tmp) {
-		strcpy(tmp2,p);
+		Xstrcpy(tmp2,p);
 		*p = 0;
 		if( (rval += chckstem(tmp,stemkeys,1)) ) {
 			printf("%s-%s\tn\t%s\n", tmp, tmp2, stemkeys );

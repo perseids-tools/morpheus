@@ -35,7 +35,7 @@ main(int argc, char * argv[])
 		exit(-1);
 	}
 
-	strcpy(fname,argv[argc-1]);
+	Xstrcpy(fname,argv[argc-1]);
 	if( !strcmp(fname,"all") ) {
 		do_all_derivs(maintable,formcode);
 	} else
@@ -56,7 +56,7 @@ do_all_derivs(int maintable, int formcode)
 /*
 	sprintf(inpfname,"rule_files%c%s",  DIRCHAR, "derivtypes.table" );
 */
-	strcpy(inpfname,DERIVTYPES);
+	Xstrcpy(inpfname,DERIVTYPES);
 	if(! (finput=MorphFopen(inpfname,"r"))) {
 		printf("could not open [%s]\n",  inpfname );
 		return(-1);

@@ -30,7 +30,7 @@ stand_phonetics(gk_word *Gkword)
 				add_geogregion(Gkword,LACONIA);
 			}
 			else {
-				strcpy(s,s+1);
+				Xstrcpy(s,s+1);
 				addbreath(s,ROUGHBR);
 			}
 			s++;
@@ -38,7 +38,7 @@ stand_phonetics(gk_word *Gkword)
 		}
 		
 		if( *s == H_AS_ROUGH ) {
-				strcpy(s,s+1);
+				Xstrcpy(s,s+1);
 				addbreath(s,ROUGHBR);
 				if( islower(*s) ) *s = toupper(*s);
 				continue;
@@ -51,7 +51,7 @@ stand_phonetics(gk_word *Gkword)
 		if( *s == 's' && *(s+1) == 'd' ) { /* "sd" --> "z" *
 			*s = 'z';
 			s++;
-			strcpy(s,s+1);
+			Xstrcpy(s,s+1);
 		}
 		*/
 		/*
@@ -61,7 +61,7 @@ stand_phonetics(gk_word *Gkword)
 		if( *s == 'k' && *(s+1) == 's' ) { /* "ks" --> "c" *
 			*s = 'c';
 			s++;
-			strcpy(s,s+1);
+			Xstrcpy(s,s+1);
 		}
 		*/
 		if( isalpha(*s) ) lastc = *s;

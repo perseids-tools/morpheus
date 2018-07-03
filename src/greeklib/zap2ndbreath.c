@@ -27,7 +27,7 @@ zap_extra_breath(char *s)
 				s++;
 				continue;
 			}
-			strcpy(s,s+1);
+			Xstrcpy(s,s+1);
 		}
 		s++;
 	}
@@ -68,7 +68,7 @@ char *s;
 	while(*s) {
 		if( *s=='r' && *(s+1) == ')' 
 		&&  *(s+2)=='r' && *(s+3) == '(' ) {
-			strcpy(s,"rr");
+			Xstrcpy(s,"rr");
 			strcat(s,s+4);
 		}
 		s++;

@@ -111,7 +111,7 @@ char *argv[];
 	foutput = stdout;
 	fstats = ffailed = stderr;
       } else {
-	strcpy(outname,optarg);
+	Xstrcpy(outname,optarg);
 	sprintf(failedname,"%s.failed",outname);
 	sprintf(statsname,"%s.stats",outname);
 printf("outname [%s]\n", outname );
@@ -128,8 +128,8 @@ printf("outname [%s]\n", outname );
 
     fstats = ffailed = stderr;
   } else {
-    strcpy(fname,argv[optind++]);
-    strcpy(inpname,fname);
+    Xstrcpy(fname,argv[optind++]);
+    Xstrcpy(inpname,fname);
     strcat(inpname,".words");
     
     if (optind >= argc) {
@@ -140,7 +140,7 @@ printf("outname [%s]\n", outname );
       }
 fprintf(stdout,"files: [%s] [%s]\n", outname, failedname);
     } else {
-      strcpy(destPath,argv[optind]);
+      Xstrcpy(destPath,argv[optind]);
       sprintf(outname,"%s%c%s.morph",destPath, PATH_SEP, fname);
     }
     
@@ -180,7 +180,7 @@ fprintf(stdout,"files: [%s] [%s]\n", outname, failedname);
        */
     /*
        printf("%s %s %d\n", line, prevl , dictstrcmp(line,prevl) );
-       strcpy(prevl,line);
+       Xstrcpy(prevl,line);
        continue;
        */		
     
@@ -210,7 +210,7 @@ fprintf(stdout,"files: [%s] [%s]\n", outname, failedname);
     if( cur_lang() != LATIN && ! rval && (flags & IGNORE_ACCENTS) ) {
 	char tmpform[BUFSIZ];
 
-	strcpy(tmpform,line);
+	Xstrcpy(tmpform,line);
 	stripbreath(tmpform);
 	addbreath(tmpform,')');
         rval = checkstring(tmpform,flags,foutput);
@@ -227,7 +227,7 @@ fprintf(stdout,"files: [%s] [%s]\n", outname, failedname);
       if( string_time >= long_time && nwords > 0 && rval ) {
 	
 	long_time = string_time;
-	strcpy(long_string,line);
+	Xstrcpy(long_string,line);
 	fprintf(stderr,":longtime\t%.2f\t%s\n", long_time, long_string );
       }
     }

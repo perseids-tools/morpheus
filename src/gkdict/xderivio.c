@@ -192,7 +192,7 @@ checkcomderiv(char *derivstr, char *suffix, char *lkeys, char *rkeys, int had_re
 			s++;
 			while(*s&&*s!=':') s++;
 			if(*s) s++;
-			strcpy(curderiv,s);
+			Xstrcpy(curderiv,s);
 			
 			p = tmpderivstr;
 			while(*p&&*p!=':') p++;

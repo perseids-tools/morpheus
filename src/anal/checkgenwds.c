@@ -86,7 +86,7 @@ printf("\nin checkgenword accword [%s]\n", accword );
 	if( (prntflags_of(Gkword) & IGNORE_ACCENTS) ) {
 		char wordnoacc[MAXWORDSIZE];
 
-		strcpy(wordnoacc,wordnoacute);
+		Xstrcpy(wordnoacc,wordnoacute);
 		stripacc(wordnoacc);
 		checks = wordnoacc;
 	
@@ -246,7 +246,7 @@ printf("tmphalf1 [%s] s [%s]\n", tmphalf1, s );
 				if( tmphalf1[0] ) {
 					strcat(tmphalf1,"-");
 					strcat(tmphalf1,cmplem);
-					strcpy(cmplem,tmphalf1);
+					Xstrcpy(cmplem,tmphalf1);
 				}
 				break;
 			}
@@ -259,7 +259,7 @@ printf("s [%s] tmplem [%s] tmphalf1 [%s] t [%s] cmplem[%s]\n", s , tmplem , tmph
 			if(!s ) {
 				if( tmphalf1[0] ) strcat(tmphalf1,",");
 				strcat(tmphalf1,t);
-				strcpy(tmplem,tmphalf1);
+				Xstrcpy(tmplem,tmphalf1);
 				 break;
 			}
 			*s++ = 0;

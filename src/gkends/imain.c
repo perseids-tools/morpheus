@@ -50,7 +50,7 @@ char * argv[];
 		exit(-1);
 	}
 
-	strcpy(fname,argv[argc-1]);
+	Xstrcpy(fname,argv[argc-1]);
 /*
 	printf("about to compile ending type [%s]\n", fname );
 */

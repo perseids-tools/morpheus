@@ -697,7 +697,7 @@ char *s;
 #ifndef SUNTOOL
 			case ':':	/* raised dot */
  				if( cur_device == INTERLEAF && cur_font == GREEK ) {
- 					strcpy(cur_char,"<#1b>");
+ 					Xstrcpy(cur_char,"<#1b>");
  					add_cur_char(-1);
  					sync_source();
  					s++;
@@ -814,7 +814,7 @@ tlg_punct()
 	skip_num_arg();
 
 	if( n < MAX_PUNCT  ) {
-	 	strcpy(cur_char, cur_punct[n] );
+	 	Xstrcpy(cur_char, cur_punct[n] );
 	} else {
 	    switch( n ) {
 /*
@@ -868,7 +868,7 @@ tlg_punct()
 		case 22:
 /* french circumflex */
 			if( cur_device == FILEFORMAT ) 
-				strcpy(cur_char,"\\*^");
+				Xstrcpy(cur_char,"\\*^");
 			if( cur_device == AVT ) {
 				if( *Cp == 'e' )
 					sprintf(cur_char,"\016e\b>\017");
@@ -902,7 +902,7 @@ tlg_punct()
 			break;
 		case 24:
 /* the hell with "~" on an n etc., for now at any rate */
-		 	strcpy(cur_char,"~");
+		 	Xstrcpy(cur_char,"~");
 			break;
 		case 25:
 /* c cedila */
@@ -951,11 +951,11 @@ int len;
 	
 	if( cur_font == GREEK && in_rev_vid ) {
 		char tmp[128];
-		strcpy( tmp , cur_char );
+		Xstrcpy( tmp , cur_char );
 		cur_char[0] = 0;
 		in_rev_vid = 0;
 		to_greek();
-		strcpy( cur_char , tmp );
+		Xstrcpy( cur_char , tmp );
 	}
 
 #ifndef SUNTOOL
@@ -964,9 +964,9 @@ int len;
 
 	/* don't do anything if the first char is already control char */
 		if( cur_char[0] > ' ' ) {
-			strcpy(tmp,cur_char);
+			Xstrcpy(tmp,cur_char);
 			to_roman();
-			strcpy(cur_char,tmp);
+			Xstrcpy(cur_char,tmp);
 			add_cur_char(len);
 			to_greek();
 /*
@@ -1010,10 +1010,10 @@ int print_flag;
 			fprintf(fout,"%s", line );
 			return(0);
 		}
-		strcpy(gk_lbuf , line );
+		Xstrcpy(gk_lbuf , line );
 		return( strlen(gk_lbuf) );
 	}
-	strcpy(source_buf,line);
+	Xstrcpy(source_buf,line);
 	s = source_buf;
 	if( *s == '~' ) {
 /*
@@ -1037,7 +1037,7 @@ fprintf(fout,"%s", newline );
 			}
 			return(0);
 		} else {
-			strcpy( gk_lbuf , s+1 );
+			Xstrcpy( gk_lbuf , s+1 );
 			return( strlen(gk_lbuf) );
 		}
 	}
@@ -1295,7 +1295,7 @@ to_bold_greek()
 
 to_greek()
 {
-	strcpy(cur_char, esc_tgreek );
+	Xstrcpy(cur_char, esc_tgreek );
 	add_cur_char(0);
 	cur_font = GREEK;
 }
@@ -1303,7 +1303,7 @@ to_greek()
 
 to_roman()
 {
-	strcpy(cur_char, esc_troman );
+	Xstrcpy(cur_char, esc_troman );
 	add_cur_char(0);
 	cur_font = ROMAN;
 }
@@ -1547,7 +1547,7 @@ got_match(val,curc)
 int val;
 int curc;
 {
-	strcpy( match_buf , text_buf );
+	Xstrcpy( match_buf , text_buf );
 	match_val = val;
 
 	if( curc == 0 ) {
@@ -1606,7 +1606,7 @@ int len;
 		    sval++;
 /*
 		    tline = malloc( strlen(tab_ptr->look_for) + 1);
-		    strcpy( tline, tab_ptr->look_for);
+		    Xstrcpy( tline, tab_ptr->look_for);
 */
 		    keys[sval] = tab_ptr->look_for;
 		    if ( tkenter( Tree, tab_ptr->look_for, sval ) == FAILURE )
@@ -1651,9 +1651,9 @@ tlg_quote()
 	
 	/* if number is above MAX_QUOTE, simply print "default" bracket */
 	if( n < MAX_QUOTE )
-		strcpy( cur_char , *(quote_tab + n) );
+		Xstrcpy( cur_char , *(quote_tab + n) );
 	else
-		strcpy( cur_char , *quote_tab );
+		Xstrcpy( cur_char , *quote_tab );
 	
 	add_non_alph(-1);
 	skip_num_arg();
@@ -1677,9 +1677,9 @@ tlg_brackets()
 		brack_tab = rbrack_tab;
 	/* if number is above MAX_BRACKET, simply print "default" bracket */
 	if( n < MAX_BRACKET )
-		strcpy( cur_char , *(brack_tab + n) );
+		Xstrcpy( cur_char , *(brack_tab + n) );
 	else
-		strcpy( cur_char , *brack_tab );
+		Xstrcpy( cur_char , *brack_tab );
 	
 	add_non_alph(-1);
 	skip_num_arg();

@@ -30,7 +30,7 @@ char * argv[];
 	srch = &Srch;
 
 	srch->rflags |= SPELL_CHECK;
-	strcpy(srch->sname,argv[2]);
+	Xstrcpy(srch->sname,argv[2]);
 	
 	while(fgets(curword,sizeof curword,finput) ) {
 		trimnl(curword);
@@ -79,10 +79,10 @@ register char * s;
 {
 	char tmp[256];
 
-	strcpy(tmp,"@");
+	Xstrcpy(tmp,"@");
 	strcat(tmp,s);
 	strcat(tmp,"@");
-	strcpy(s,tmp) ;
+	Xstrcpy(s,tmp) ;
 }
 
 /*

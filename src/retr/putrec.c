@@ -229,7 +229,7 @@ FILE * foutfile;
 
 	tlg_seek( srch->sname , start );
 	/* copy current line into cur_line */
-	strcpy( cur_line , tlg_cur_textline() );
+	Xstrcpy( cur_line , tlg_cur_textline() );
 
 
 	index = (int)(start - (get_textoffset()));
@@ -302,7 +302,7 @@ int part;
 	if( index < 0 ) 
 		return(-1);
 	if( part == 1 ) {
-		strcpy(tmp,s);
+		Xstrcpy(tmp,s);
 		*(s+index) = 0;
 		gk_sprint(s,PRINTFLAG);
 		fadd_newline(f);

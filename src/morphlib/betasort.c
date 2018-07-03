@@ -64,7 +64,7 @@ char * argv[];
 		}
 		s = (char *) malloc(nlen);
 		*(key_table+nkeys) = s;
-		strcpy(*(key_table+nkeys),line);
+		Xstrcpy(*(key_table+nkeys),line);
 		nkeys++;
 
 	}

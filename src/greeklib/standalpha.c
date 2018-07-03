@@ -13,7 +13,7 @@ standalpha(char *s )
 	while(*s) {
 		if(!strncmp("a_",s,2)) {
 			*s++ = 'h';
-			strcpy(s,s+1);
+			Xstrcpy(s,s+1);
 		}
 		s++;
 	}

@@ -32,10 +32,10 @@ char *s;
 	long nhits = 0;
 	char * p;
 		
-		strcpy(inpname,s);
+		Xstrcpy(inpname,s);
 		strcat(inpname,".words");
 		
-		strcpy(outname,s);
+		Xstrcpy(outname,s);
 		strcat(outname,".morph");
 
 		if((finput=fopen(inpname,"r")) == NULL) {
@@ -54,7 +54,7 @@ char *s;
 	while(fgets(line,(int)sizeof line,finput)) {
 /*
 		printf("%s %s %d\n", line, prevl , dictstrcmp(line,prevl) );
-		strcpy(prevl,line);
+		Xstrcpy(prevl,line);
 		continue;
 */		
 		trimwhite(line);

@@ -16,7 +16,7 @@ char * argv[];
 	int i = 0;
 	
 
-	strcpy(filename,"morphfile");
+	Xstrcpy(filename,"morphfile");
 	if( (f=fopen(filename,"r")) == NULL ) {
 		fprintf(stdout,"Filename?\n" );
 		gets(filename);
@@ -27,9 +27,9 @@ char * argv[];
 	}
 /*
 	if(argc == 1 )
-		strcpy(filename,"morphfile");
+		Xstrcpy(filename,"morphfile");
 	else
-		strcpy(filename,argv[2] );
+		Xstrcpy(filename,argv[2] );
 	if( (f=fopen(filename,"r")) == NULL ) {
 		fprintf(stderr,"Could not open [%s]\n", filename );
 		exit(-1);

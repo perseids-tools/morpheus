@@ -23,7 +23,7 @@ char * s;
 		*b-- = 0;
 	}
 	
-	strcpy(s,a);
+	Xstrcpy(s,a);
 }
 
 s_blank(s)

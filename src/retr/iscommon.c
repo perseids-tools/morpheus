@@ -21,7 +21,7 @@ char *s;
 	register char *p;
 	
 	p = curkey;
-	if(*s=='@') strcpy(p,s+1);
+	if(*s=='@') Xstrcpy(p,s+1);
 	while(*p) p++; p--;
 	if(*p == '@' ) *p = 0;
 
@@ -44,7 +44,7 @@ init_common()
 	char curword[128];
 	char libdir[BUFSIZ];
 
-	strcpy(libdir,getenv("LIBDIR"));
+	Xstrcpy(libdir,getenv("LIBDIR"));
 	if( ! libdir[0] ) {
 		fprintf(stderr,"could not initialize LIBDIR!\n");
 		exit(-1);
@@ -73,7 +73,7 @@ init_common()
 			curword[n-1] = 0; /* zap '\n' */
 			n--;
 			*(commonwords+i) = (char *) malloc((size_t)(n+1));
-			strcpy(*(commonwords+i),curword);
+			Xstrcpy(*(commonwords+i),curword);
 		}
 	}
 	fclose(f);

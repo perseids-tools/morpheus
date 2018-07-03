@@ -28,7 +28,7 @@ char * result;
 		smkinited++;
 		init_smk();
 	}
-	strcpy(result,Xlit_table[c]);
+	Xstrcpy(result,Xlit_table[c]);
 }
 
 init_smk()
@@ -37,7 +37,7 @@ init_smk()
 	char tmp[80];
 
 	for(i=0;i<sizeof Beta_SMK/sizeof Beta_SMK[0];i++) {
-		strcpy(Xlit_table[Beta_SMK[i].keycode],Beta_SMK[i].keystring);
+		Xstrcpy(Xlit_table[Beta_SMK[i].keycode],Beta_SMK[i].keystring);
 printf("%d) Xlit_table [%s]\n", Beta_SMK[i].keycode , Xlit_table[Beta_SMK[i].keycode] );
 	}
 		

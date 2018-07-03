@@ -41,10 +41,10 @@ long * offlist;
 
 
         tlg_seek(sname,startout);
-        strcpy(line,tlg_cur_textline());
+        Xstrcpy(line,tlg_cur_textline());
         markwords(get_textoffset(),line,offlist);
 
-        strcpy(Srch.sname,sname);
+        Xstrcpy(Srch.sname,sname);
         workbyoff(&Srch,TxtFtell(Srch.sname));
         printf("\n\n______");
         printf("%s %s\n", Srch.title,tlg_cur_label(' ') );              

@@ -24,10 +24,10 @@ int CompGkForms(gk_word *gkform1, gk_word *gkform2);
 		char saveline[BUFSIZ*4];
 
 		fflush(fout);
-		strcpy(saveline,line);
+		Xstrcpy(saveline,line);
 		*Gkword = Blnk;
 		if( ! strncmp(line,":le:",4) ) {
-			strcpy(curlemma,line+4);
+			Xstrcpy(curlemma,line+4);
 			if( curlemma[strlen(curlemma)-1] == '\n' )
 				curlemma[strlen(curlemma)-1] = 0;
 			fprintf(fout,"%s", line );

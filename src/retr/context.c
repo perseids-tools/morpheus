@@ -95,7 +95,7 @@ static ssjump(char * startp, int slen,int separation,int units);
  */
         startp[len++] = ' ';
         startp[len] = 0;
-	strcpy(gksel->gkselbufp, startp );
+	Xstrcpy(gksel->gkselbufp, startp );
 
 
         gksel->gksellen = len;
