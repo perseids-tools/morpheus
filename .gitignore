@@ -33,16 +33,18 @@ src/gkends/indderivtables
 src/gkends/indendtables
 
 stemlib/Greek/conjfile
-stemlib/Greek/derivs/indices/derivind
-stemlib/Greek/endtables/indices/nendind
-stemlib/Greek/endtables/indices/vbendind
-stemlib/Greek/steminds/entitylist.txt
-stemlib/Greek/steminds/nomind
-stemlib/Greek/steminds/nomind.lindex
-stemlib/Greek/steminds/vbind
-stemlib/Greek/steminds/vbind.lindex
+stemlib/Greek/derivs/indices/
+stemlib/Greek/endtables/indices/
+stemlib/Greek/steminds/
 stemlib/Greek/stemsrc/flatlems
 stemlib/Greek/stemsrc/goodstem
 stemlib/Greek/stemsrc/headnolen
 stemlib/Greek/stemsrc/stripref
 stemlib/Greek/stemsrc/zapfirstf
+
+stemlib/Latin/conjfile
+stemlib/Latin/derivs/indices/
+stemlib/Latin/endtables/indices/nendind
+stemlib/Latin/endtables/indices/vbendind
+stemlib/Latin/oddfile
+stemlib/Latin/steminds/
