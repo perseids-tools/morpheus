@@ -26,10 +26,12 @@ CFLAGS='-std=gnu89 -Wno-return-type' make LOADLIBES='-ll'
 make install
 
 cd ../stemlib/Greek/
+make clean
 PATH="$PATH:../../bin" MORPHLIB='..' make
 PATH="$PATH:../../bin" MORPHLIB='..' make
 
 cd ../Latin/
+make clean
 PATH="$PATH:../../bin" MORPHLIB='..' make
 PATH="$PATH:../../bin" MORPHLIB='..' make
 ```
@@ -47,10 +49,12 @@ CFLAGS='-std=gnu89' make
 make install
 
 cd ../stemlib/Greek/
+make clean
 PATH="$PATH:../../bin" MORPHLIB='..' make
 PATH="$PATH:../../bin" MORPHLIB='..' make
 
 cd ../Latin/
+make clean
 PATH="$PATH:../../bin" MORPHLIB='..' make
 PATH="$PATH:../../bin" MORPHLIB='..' make
 ```

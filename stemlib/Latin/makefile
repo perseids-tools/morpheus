@@ -1,6 +1,22 @@
 LSDIR=/local/text/ls
 
-all: ends noms vbs deriv
+all: setup ends noms vbs deriv
+
+setup:
+	mkdir derivs/indices || true
+	mkdir endtables/ascii || true
+	mkdir endtables/indices || true
+	mkdir endtables/out || true
+	mkdir steminds || true
+
+clean:
+	rm -r derivs/indices || true
+	rm -r endtables/ascii || true
+	rm -r endtables/indices || true
+	rm -r endtables/out || true
+	rm -r steminds || true
+	rm conjfile || true
+	rm oddfile || true
 
 ends: nends vends
 

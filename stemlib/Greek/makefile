@@ -8,7 +8,31 @@ STEMPROG= stemsrc/stripref stemsrc/zapfirstf stemsrc/headnolen \
 # Get all noms files, but without emacs backups
 nomsrc= $(filter-out %~,$(wildcard stemsrc/nom.* stemsrc/nom[0-9]*))
 
-all: $(STEMPROG) ends noms vbs deriv 
+all: setup $(STEMPROG) ends noms vbs deriv 
+
+setup:
+	mkdir derivs/ascii || true
+	mkdir derivs/indices || true
+	mkdir derivs/out || true
+	mkdir endtables/ascii || true
+	mkdir endtables/indices || true
+	mkdir endtables/out || true
+	mkdir steminds || true
+
+clean:
+	rm -r derivs/ascii || true
+	rm -r derivs/indices || true
+	rm -r derivs/out || true
+	rm -r endtables/ascii || true
+	rm -r endtables/indices || true
+	rm -r endtables/out || true
+	rm -r steminds || true
+	rm conjfile || true
+	rm stemsrc/flatlems || true
+	rm stemsrc/goodstem || true
+	rm stemsrc/headnolen || true
+	rm stemsrc/stripref || true
+	rm stemsrc/zapfirstf || true
 
 ends: nends vends
 
