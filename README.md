@@ -61,13 +61,24 @@ PATH="$PATH:../../bin" MORPHLIB='..' make
 
 ### Docker
 
+### From Docker Hub
+
+```bash
+docker pull perseidsproject/morpheus
+
+docker run -it morpheus /bin/bash
+```
+
+(Also see project on
+[Docker Hub](https://cloud.docker.com/swarm/perseidsproject/repository/registry-1.docker.io/perseidsproject/morpheus/general).)
+
 #### Building container
 
-`docker build -t morpheus-basic .`
+```
+docker build -t morpheus .
 
-#### Running container
-
-`docker run -it morpheus-basic /bin/bash`
+docker run -it morpheus /bin/bash
+```
 
 ## Usage
 
