@@ -7,16 +7,31 @@ and [alpheios-project/morpheus](https://github.com/alpheios-project/morpheus).
 
 ## Building
 
-Requirements:
-- `make`
-- `gcc`
-- `flex`
+### Docker
+
+### From Docker Hub
+
+```bash
+docker pull perseidsproject/morpheus
+
+docker run -it morpheus /bin/bash
+```
+
+(See project on [Docker Hub](https://hub.docker.com/r/perseidsproject/morpheus/).)
+
+#### Building container
+
+```
+docker build -t morpheus .
+
+docker run -it morpheus /bin/bash
+```
 
 ### macOS
 
-The Xcode command line tools come with a C compiler, make, and flex.
-The following commands should compile the code
-(tested on macOS High Sierra Version 10.13.5, Apple LLVM version 9.1.0).
+Requirements:
+
+- Xcode command line tools
 
 ```bash
 cd src/
@@ -36,10 +51,15 @@ PATH="$PATH:../../bin" MORPHLIB='..' make
 PATH="$PATH:../../bin" MORPHLIB='..' make
 ```
 
+(Tested on macOS High Sierra Version 10.13.5, Apple LLVM version 9.1.0.)
+
 ### Linux
 
-Make sure flex is installed (`apt-get install flex` on Ubuntu).
-The following commands should compile the code (tested on Ubuntu 16.04 and 18.04).
+Requirements:
+
+- `make`
+- `gcc`
+- `flex`
 
 ```bash
 cd src/
@@ -59,26 +79,7 @@ PATH="$PATH:../../bin" MORPHLIB='..' make
 PATH="$PATH:../../bin" MORPHLIB='..' make
 ```
 
-### Docker
-
-### From Docker Hub
-
-```bash
-docker pull perseidsproject/morpheus
-
-docker run -it morpheus /bin/bash
-```
-
-(Also see project on
-[Docker Hub](https://cloud.docker.com/swarm/perseidsproject/repository/registry-1.docker.io/perseidsproject/morpheus/general).)
-
-#### Building container
-
-```
-docker build -t morpheus .
-
-docker run -it morpheus /bin/bash
-```
+(Tested on Ubuntu 16.04 and 18.04.)
 
 ## Usage
 
