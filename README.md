@@ -9,7 +9,7 @@ and [alpheios-project/morpheus](https://github.com/alpheios-project/morpheus).
 
 ### Docker
 
-### From Docker Hub
+#### From Docker Hub
 
 ```bash
 docker pull perseidsproject/morpheus
