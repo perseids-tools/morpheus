@@ -36,7 +36,6 @@ Requirements:
 ```bash
 cd src/
 make clean
-
 CFLAGS='-std=gnu89 -Wno-return-type' make LOADLIBES='-ll'
 make install
 
@@ -64,7 +63,6 @@ Requirements:
 ```bash
 cd src/
 make clean
-
 CFLAGS='-std=gnu89' make
 make install
 
@@ -116,3 +114,11 @@ $ echo 'cactus' | MORPHLIB=stemlib bin/cruncher -S -L
 | -l | Show lemma. When this switch is set, instead of printing the entire analysis, cruncher will only show the lemma or headword from which the given form is made. |
 | -P | Turn off Perseus format. Output will be in the form `$feminam& is^M &from$ femina^M $fe\_minam^M [&stem $fe\_min-& ]^M & a\_ae fem acc sg^M`. Note the returns, without line feeds, between the fields. |
 | -V | Analyze verbs only. |
+
+## Tests
+
+Requirements:
+
+- `ruby` (~2.5)
+
+`./test/test.rb`

@@ -1,0 +1,603 @@
+[
+  {
+    "input": "*darei/ou",
+    "expected": "*darei/ou\n<NL>N *da_rei_/ou,*darei=os  masc gen sg\t\t\tos_ou</NL>\n"
+  },
+  {
+    "input": "kai\\",
+    "expected": "kai\\\n<NL>N kai/,kai/ \t\tindeclform\tconj</NL>\n"
+  },
+  {
+    "input": "*parusa/tidos",
+    "expected": "*parusa/tidos\n<NL>N *paru/satis  fem gen sg\t\t\tis_idos</NL>\n"
+  },
+  {
+    "input": "gi/gnontai",
+    "expected": "gi/gnontai\n<NL>V gi/gnomai  pres ind mp 3rd pl\t\tpres_redupl\tw_stem,reg_conj</NL>\n"
+  },
+  {
+    "input": "pai=des",
+    "expected": "pai=des\n<NL>N pai=s  masc/fem nom/voc pl\t\tindeclform\tirreg_decl3</NL>\n"
+  },
+  {
+    "input": "du/o",
+    "expected": "du/o\n<NL>N du/o \t\tindeclform\tnumeral</NL>\n"
+  },
+  {
+    "input": "presbu/teros",
+    "expected": "presbu/teros\n<NL>N pre/sbus  masc nom sg\t\tirreg_comp\tos_h_on</NL>\n"
+  },
+  {
+    "input": "me\\n",
+    "expected": "me\\n\n<NL>N me/n,me/n \t\tindeclform\tparticle</NL>\n"
+  },
+  {
+    "input": "*)artace/rchs",
+    "expected": "*)artace/rchs\n<NL>N *)artace/rchs  masc nom sg\t\t\ths_ou</NL>\n"
+  },
+  {
+    "input": "new/teros",
+    "expected": "new/teros\n<NL>N ne/os  masc nom comp sg\t\t\tos_h_on</NL><NL>N ne/os  masc nom comp sg\tattic\t\tos_on</NL><NL>N new/teros  masc nom sg\t\t\tos_h_on</NL>\n"
+  },
+  {
+    "input": "de\\",
+    "expected": "de\\\n<NL>N de/,de/ \t\tindeclform\tparticle</NL>\n"
+  },
+  {
+    "input": "*ku=ros:",
+    "expected": "*ku=ros:\n<NL>N *ku=ros,*ku=ros  masc nom sg\t\t\tos_ou</NL><NL>E *ku=ros,Cyrus  masc nom sg\t\t\tos_ou</NL>\n"
+  },
+  {
+    "input": "e)pei\\",
+    "expected": "e)pei\\\n<NL>N e)pei/,e)pei/ \t\tindeclform\tconj</NL>\n"
+  },
+  {
+    "input": "de\\",
+    "expected": "de\\\n<NL>N de/,de/ \t\tindeclform\tparticle</NL>\n"
+  },
+  {
+    "input": "h)sqe/nei",
+    "expected": "h)sqe/nei\n<NL>V a)sqene/w  imperf ind act 3rd sg\tattic epic ionic\tcontr\tew_pr,ew_denom</NL>\n"
+  },
+  {
+    "input": "*darei=os",
+    "expected": "*darei=os\n<NL>N *da_rei=os,*darei=os  masc nom sg\t\t\tos_ou</NL>\n"
+  },
+  {
+    "input": "kai\\",
+    "expected": "kai\\\n<NL>N kai/,kai/ \t\tindeclform\tconj</NL>\n"
+  },
+  {
+    "input": "u(pw/pteue",
+    "expected": "u(pw/pteue\n<NL>V u(popteu/w  imperf ind act 3rd sg\t\t\tw_stem,euw</NL>\n"
+  },
+  {
+    "input": "teleuth\\n",
+    "expected": "teleuth\\n\n<NL>N teleuth/n,teleuth/  fem acc sg\tattic epic ionic\t\th_hs</NL>\n"
+  },
+  {
+    "input": "tou=",
+    "expected": "tou=\n<NL>N o(  masc/neut gen sg\t\tindeclform\tarticle</NL><NL>N ti/s  gen sg\tattic\tindeclform\tindecl</NL><NL>N tis  gen sg\tattic\tenclitic indeclform\tindef</NL>\n"
+  },
+  {
+    "input": "bi/ou",
+    "expected": "bi/ou\n<NL>N bi/os  masc gen sg\t\t\tos_ou</NL><NL>V bio/w  pres imperat act 2nd sg\t\tcontr\tow_pr,ow_denom</NL><NL>V bio/w  imperf ind mp 2nd sg\tattic epic doric\tcontr unaugmented\tw_stem</NL><NL>V bio/w  imperf ind act 3rd sg\thomeric ionic\tcontr unaugmented\tow_pr,ow_denom</NL>\n"
+  },
+  {
+    "input": "e)bou/leto",
+    "expected": "e)bou/leto\n<NL>V bou/lomai  imperf ind mp 3rd sg\t\t\tw_stem,nw</NL>\n"
+  },
+  {
+    "input": "tw\\",
+    "expected": "tw\\\n<NL>N tw/,o(  fem nom/voc/acc dual\t\tindeclform\tarticle</NL><NL>N tw/,o(  masc/neut acc dual\t\tindeclform\tarticle</NL><NL>N tw/,o(  masc/neut nom/voc/acc dual\t\tindeclform\tarticle</NL><NL>N tw/,tw=| \t\tindeclform\tadverb</NL>\n"
+  },
+  {
+    "input": "pai=de",
+    "expected": "pai=de\n<NL>N pai=s  masc/fem nom/voc/acc dual\t\tindeclform\tirreg_decl3</NL>\n"
+  },
+  {
+    "input": "a)mfote/rw",
+    "expected": "a)mfote/rw\n<NL>N a)mfo/teros  masc/neut nom/voc/acc dual\t\t\tos_h_on</NL><NL>N a)mfo/teros  masc/neut gen sg\tdoric aeolic\t\tos_h_on</NL>\n"
+  },
+  {
+    "input": "parei=nai",
+    "expected": "parei=nai\n<NL>V pa/reimi1  pres inf act\t\t\tirreg_mi</NL><NL>V pari/hmi  aor inf act\t\t\tath_secondary</NL><NL>V pari/hmi  aor inf act\t\t\tirreg_mi</NL>\n"
+  },
+  {
+    "input": "*darei/ou",
+    "opts": [
+      "-n"
+    ],
+    "expected": "*darei/ou\n<NL>N *da_rei_/ou,*darei=os  masc gen sg\t\t\tos_ou</NL>\n"
+  },
+  {
+    "input": "kai\\",
+    "opts": [
+      "-n"
+    ],
+    "expected": "kai\\\n<NL>N kai/,kai/ \t\tindeclform\tconj</NL>\n"
+  },
+  {
+    "input": "*parusa/tidos",
+    "opts": [
+      "-n"
+    ],
+    "expected": "*parusa/tidos\n<NL>N *paru/satis  fem gen sg\t\t\tis_idos</NL>\n"
+  },
+  {
+    "input": "gi/gnontai",
+    "opts": [
+      "-n"
+    ],
+    "expected": "gi/gnontai\n<NL>V gi/gnomai  pres ind mp 3rd pl\t\tpres_redupl\tw_stem,reg_conj</NL>\n"
+  },
+  {
+    "input": "pai=des",
+    "opts": [
+      "-n"
+    ],
+    "expected": "pai=des\n<NL>N pai=s  masc/fem nom/voc pl\t\tindeclform\tirreg_decl3</NL>\n"
+  },
+  {
+    "input": "du/o",
+    "opts": [
+      "-n"
+    ],
+    "expected": "du/o\n<NL>N du/o \t\tindeclform\tnumeral</NL>\n"
+  },
+  {
+    "input": "presbu/teros",
+    "opts": [
+      "-n"
+    ],
+    "expected": "presbu/teros\n<NL>N pre/sbus  masc nom sg\t\tirreg_comp\tos_h_on</NL>\n"
+  },
+  {
+    "input": "me\\n",
+    "opts": [
+      "-n"
+    ],
+    "expected": "me\\n\n<NL>N me/n,me/n \t\tindeclform\tparticle</NL>\n"
+  },
+  {
+    "input": "*)artace/rchs",
+    "opts": [
+      "-n"
+    ],
+    "expected": "*)artace/rchs\n<NL>N *)artace/rchs  masc nom sg\t\t\ths_ou</NL>\n"
+  },
+  {
+    "input": "new/teros",
+    "opts": [
+      "-n"
+    ],
+    "expected": "new/teros\n<NL>N ne/os  masc nom comp sg\t\t\tos_h_on</NL><NL>N ne/os  masc nom comp sg\tattic\t\tos_on</NL><NL>N new/teros  masc nom sg\t\t\tos_h_on</NL>\n"
+  },
+  {
+    "input": "de\\",
+    "opts": [
+      "-n"
+    ],
+    "expected": "de\\\n<NL>N de/,de/ \t\tindeclform\tparticle</NL>\n"
+  },
+  {
+    "input": "*ku=ros:",
+    "opts": [
+      "-n"
+    ],
+    "expected": "*ku=ros:\n<NL>N *ku=ros,*ku=ros  masc nom sg\t\t\tos_ou</NL><NL>E *ku=ros,Cyrus  masc nom sg\t\t\tos_ou</NL>\n"
+  },
+  {
+    "input": "e)pei\\",
+    "opts": [
+      "-n"
+    ],
+    "expected": "e)pei\\\n<NL>V e)pei=,e)/peimi1  pres ind act 2nd sg\t\tunasp_preverb\tirreg_mi</NL><NL>V e)/pei,e)/peimi2  pres ind act 2nd sg\t\tunasp_preverb\tirreg_mi</NL><NL>N e)/pei,e)/pos  neut nom/voc/acc dual\tattic epic\tcontr\ths_eos</NL><NL>N e)/pei+,e)/pos  neut dat sg\tepic ionic\t\ths_eos</NL><NL>N e)/pei,e)/pos  neut dat sg\t\tcontr\ths_eos</NL><NL>N e)pei/,e)pei/ \t\tindeclform\tconj</NL>\n"
+  },
+  {
+    "input": "de\\",
+    "opts": [
+      "-n"
+    ],
+    "expected": "de\\\n<NL>N de/,de/ \t\tindeclform\tparticle</NL>\n"
+  },
+  {
+    "input": "h)sqe/nei",
+    "opts": [
+      "-n"
+    ],
+    "expected": "h)sqe/nei\n<NL>V a)sqene/w  imperf ind act 3rd sg\tattic epic ionic\tcontr\tew_pr,ew_denom</NL>\n"
+  },
+  {
+    "input": "*darei=os",
+    "opts": [
+      "-n"
+    ],
+    "expected": "*darei=os\n<NL>N *da_rei=os,*darei=os  masc nom sg\t\t\tos_ou</NL>\n"
+  },
+  {
+    "input": "kai\\",
+    "opts": [
+      "-n"
+    ],
+    "expected": "kai\\\n<NL>N kai/,kai/ \t\tindeclform\tconj</NL>\n"
+  },
+  {
+    "input": "u(pw/pteue",
+    "opts": [
+      "-n"
+    ],
+    "expected": "u(pw/pteue\n<NL>V u(popteu/w  imperf ind act 3rd sg\t\t\tw_stem,euw</NL>\n"
+  },
+  {
+    "input": "teleuth\\n",
+    "opts": [
+      "-n"
+    ],
+    "expected": "teleuth\\n\n<NL>V teleuth=n,teleuta/w  pres inf act\tdoric ionic\tcontr\taw_pr,aw_denom</NL><NL>V teleuth=n,teleuta/w  pres inf act\tepic doric ionic\tcontr\tew_pr,aw_denom</NL><NL>V teleu/thn,teleuta/w  imperf ind act 3rd pl\tepic doric aeolic\tunaugmented\tath_primary,aw_denom</NL><NL>V teleu/thn,teleuta/w  imperf ind act 1st sg\thomeric ionic\tunaugmented\tath_primary,aw_denom</NL><NL>N teleuth/n,teleuth/  fem acc sg\tattic epic ionic\t\th_hs</NL>\n"
+  },
+  {
+    "input": "tou=",
+    "opts": [
+      "-n"
+    ],
+    "expected": "tou=\n<NL>N o(  masc/neut gen sg\t\tindeclform\tarticle</NL><NL>N ti/s  gen sg\tattic\tindeclform\tindecl</NL><NL>N tis  gen sg\tattic\tenclitic indeclform\tindef</NL>\n"
+  },
+  {
+    "input": "bi/ou",
+    "opts": [
+      "-n"
+    ],
+    "expected": "bi/ou\n<NL>N bi/os  masc gen sg\t\t\tos_ou</NL><NL>V biou=,bia/w  pres imperat mp 2nd sg\tattic epic ionic\tcontr\tew_pr,aw_denom</NL><NL>N biou=,bio/s  masc gen sg\t\t\tos_ou</NL><NL>V biou=,bio/w  pres imperat mp 2nd sg\t\tcontr\tow_pr,ow_denom</NL><NL>V bio/w  pres imperat act 2nd sg\t\tcontr\tow_pr,ow_denom</NL><NL>V bio/w  imperf ind mp 2nd sg\tattic epic doric\tcontr unaugmented\tw_stem</NL><NL>V biou=,bio/w  imperf ind mp 2nd sg\thomeric ionic\tcontr unaugmented\tow_pr,ow_denom</NL><NL>V bio/w  imperf ind act 3rd sg\thomeric ionic\tcontr unaugmented\tow_pr,ow_denom</NL>\n"
+  },
+  {
+    "input": "e)bou/leto",
+    "opts": [
+      "-n"
+    ],
+    "expected": "e)bou/leto\n<NL>V bou/lomai  imperf ind mp 3rd sg\t\t\tw_stem,nw</NL>\n"
+  },
+  {
+    "input": "tw\\",
+    "opts": [
+      "-n"
+    ],
+    "expected": "tw\\\n<NL>N tw/,o(  fem nom/voc/acc dual\t\tindeclform\tarticle</NL><NL>N tw/,o(  masc/neut acc dual\t\tindeclform\tarticle</NL><NL>N tw/,o(  masc/neut nom/voc/acc dual\t\tindeclform\tarticle</NL><NL>N tw=,o(  masc/neut gen sg\tdoric aeolic\tindeclform\tarticle</NL><NL>N tw/,tw=| \t\tindeclform\tadverb</NL><NL>N tw=,tw=| \t\tindeclform\tadverb</NL>\n"
+  },
+  {
+    "input": "pai=de",
+    "opts": [
+      "-n"
+    ],
+    "expected": "pai=de\n<NL>N pai=s  masc/fem nom/voc/acc dual\t\tindeclform\tirreg_decl3</NL>\n"
+  },
+  {
+    "input": "a)mfote/rw",
+    "opts": [
+      "-n"
+    ],
+    "expected": "a)mfote/rw\n<NL>N a)mfo/teros  masc/neut nom/voc/acc dual\t\t\tos_h_on</NL><NL>N a)mfo/teros  masc/neut gen sg\tdoric aeolic\t\tos_h_on</NL>\n"
+  },
+  {
+    "input": "parei=nai",
+    "opts": [
+      "-n"
+    ],
+    "expected": "parei=nai\n<NL>V pa/reimi1  pres inf act\t\t\tirreg_mi</NL><NL>V pari/hmi  aor inf act\t\t\tath_secondary</NL><NL>V pari/hmi  aor inf act\t\t\tirreg_mi</NL>\n"
+  },
+  {
+    "input": "Gallia",
+    "expected": "Gallia\n<NL>N Gallia_,Gallia  fem abl sg\t\t\ta_ae</NL><NL>N Gallia  fem nom/voc sg\t\t\ta_ae</NL><NL>N Gallius  neut nom/voc/acc pl\t\t\tius_ia_ium</NL><NL>N Gallia_,Gallius  fem abl sg\t\t\tius_ia_ium</NL><NL>N Gallius  fem nom/voc sg\t\t\tius_ia_ium</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "est",
+    "expected": "est\n<NL>V e_st,edo#1  pres ind act 3rd sg\t\t\tirreg_pp1</NL><NL>V sum#1  pres ind act 3rd sg\t\t\tirreg_pp1</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "omnis",
+    "expected": "omnis\n<NL>N omne  neut gen sg\t\t\tis_is</NL><NL>N omni_s,omnes  masc/fem acc pl\t\t\tis_is</NL><NL>N omni_s,omnis  masc/fem acc pl\t\t\tis_e</NL><NL>N omnis  masc/fem/neut gen sg\t\t\tis_e</NL><NL>N omnis  masc/fem nom/voc sg\t\t\tis_e</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "divisa",
+    "expected": "divisa\n<NL>P di_vi_sa,divido  perf part pass neut nom/voc/acc pl\t\t\tpp4</NL><NL>P di_vi_sa_,divido  perf part pass fem abl sg\t\t\tpp4</NL><NL>P di_vi_sa,divido  perf part pass fem nom/voc sg\t\t\tpp4</NL><NL>P divi_sa,divisor  perf part pass neut nom/voc/acc pl\t\t\tpp4</NL><NL>P divi_sa_,divisor  perf part pass fem abl sg\t\t\tpp4</NL><NL>P divi_sa,divisor  perf part pass fem nom/voc sg\t\t\tpp4</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "in",
+    "expected": "in\n<NL>N in \t\tindeclform\tprep</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "partes",
+    "expected": "partes\n<NL>N parte_s,pars  fem acc pl\t\t\ts_tis</NL><NL>N parte_s,pars  fem nom/voc pl\t\t\ts_tis</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "tres",
+    "expected": "tres\n<NL>N tre_s,tres  masc/fem acc pl\t\tindeclform\tnumeral</NL><NL>N tre_s,tres  masc/fem nom pl\t\tindeclform\tnumeral</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "quarum",
+    "expected": "quarum\n<NL>N qua_rum,qui#1  fem gen pl\t\tindeclform\tinterrog</NL><NL>N qua_rum,qui#2  fem gen pl\t\tindeclform\trelative</NL><NL>N qua_rum,quis#1  fem gen pl\t\tindeclform\tinterrog</NL><NL>N qua_rum,quis#2  fem gen pl\t\tindeclform\tindef</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "unam",
+    "expected": "unam\n<NL>N u_nam,unus  fem acc sg\t\t\tus_ius_adj</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "incolunt",
+    "expected": "incolunt\n<NL>V incolo#1  pres ind act 3rd pl\t\t\tconj3</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "Belgae",
+    "expected": "Belgae\n<NL>N Belga  masc nom/voc pl\t\t\ta_ae</NL><NL>N Belga  masc dat sg\t\t\ta_ae</NL><NL>N Belga  masc gen sg\t\t\ta_ae</NL><NL>N Belgae  masc nom/voc pl\t\t\ta_ae</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "aliam",
+    "expected": "aliam\n<NL>N alius#2  fem acc sg\t\tindeclform\tirreg_nom2</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "Aquitani",
+    "expected": "Aquitani\n<NL>N Aqui_ta_ni_,Aquitani  masc nom/voc pl\t\t\tus_i</NL><NL>N Aqui_ta_ni_,Aquitanus  masc nom/voc pl\t\t\tus_a_um</NL><NL>N Aqui_ta_ni_,Aquitanus  neut gen sg\t\t\tus_a_um</NL><NL>N Aqui_ta_ni_,Aquitanus  masc gen sg\t\t\tus_a_um</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "tertiam",
+    "expected": "tertiam\n<NL>N tertius  fem acc sg\t\t\tius_ia_ium</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "qui",
+    "expected": "qui\n<NL>N qui_,qui#1  masc nom pl\t\tindeclform\tinterrog</NL><NL>N qui_,qui#1  masc nom sg\t\tindeclform\tinterrog</NL><NL>N qui_,qui#2  masc nom pl\t\tindeclform\trelative</NL><NL>N qui_,qui#2  masc nom sg\t\tindeclform\trelative</NL><NL>N qui_,quis#1  masc nom pl\t\tindeclform\tinterrog</NL><NL>N qui_,quis#2  masc nom pl\t\tindeclform\tindef</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "ipsorum",
+    "expected": "ipsorum\n<NL>N ipso_rum,ipse  masc/neut gen pl\t\tindeclform\tdemonstr</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "lingua",
+    "expected": "lingua\n<NL>N lingua_,lingua  fem abl sg\t\t\ta_ae</NL><NL>N lingua  fem nom/voc sg\t\t\ta_ae</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "Celtae",
+    "expected": "Celtae\n<NL>N Celtae  masc nom/voc pl\t\t\ta_ae</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "nostra",
+    "expected": "nostra\n<NL>N noster  neut nom/voc/acc pl\t\t\ter_ra_rum</NL><NL>N nostra_,noster  fem abl sg\t\t\ter_ra_rum</NL><NL>N noster  fem nom/voc sg\t\t\ter_ra_rum</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "Galli",
+    "expected": "Galli\n<NL>N Galli_,Galli  masc nom/voc pl\t\t\tus_i</NL><NL>N Galli_,Gallius  masc/neut gen sg\t\t\tius_ia_ium</NL><NL>N Galli_,Gallus  masc nom/voc pl\t\t\tus_a_um</NL><NL>N Galli_,Gallus  neut gen sg\t\t\tus_a_um</NL><NL>N Galli_,Gallus  masc gen sg\t\t\tus_a_um</NL><NL>N Galli_,Gallus  masc nom/voc pl\t\t\tus_i</NL><NL>N Galli_,Gallus  masc gen sg\t\t\tus_i</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "appellantur",
+    "expected": "appellantur\n<NL>V appello  pres ind pass 3rd pl\t\t\tconj1,are_vb</NL><NL>V appello#1  pres subj pass 3rd pl\t\t\tconj3</NL>\n",
+    "opts": [
+      "-L"
+    ]
+  },
+  {
+    "input": "Gallia",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "Gallia\n<NL>N Gallia_,Gallia  fem abl sg\t\t\ta_ae</NL><NL>N Gallia  fem nom/voc sg\t\t\ta_ae</NL><NL>N Gallius  neut nom/voc/acc pl\t\t\tius_ia_ium</NL><NL>N Gallia_,Gallius  fem abl sg\t\t\tius_ia_ium</NL><NL>N Gallius  fem nom/voc sg\t\t\tius_ia_ium</NL>\n"
+  },
+  {
+    "input": "est",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "est\n<NL>V e_st,edo#1  pres ind act 3rd sg\t\t\tirreg_pp1</NL><NL>V sum#1  pres ind act 3rd sg\t\t\tirreg_pp1</NL>\n"
+  },
+  {
+    "input": "omnis",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "omnis\n<NL>N omne  neut gen sg\t\t\tis_is</NL><NL>N omni_s,omnes  masc/fem acc pl\t\t\tis_is</NL><NL>N omni_s,omnis  masc/fem acc pl\t\t\tis_e</NL><NL>N omnis  masc/fem/neut gen sg\t\t\tis_e</NL><NL>N omnis  masc/fem nom/voc sg\t\t\tis_e</NL>\n"
+  },
+  {
+    "input": "divisa",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "divisa\n<NL>P di_vi_sa,divido  perf part pass neut nom/voc/acc pl\t\t\tpp4</NL><NL>P di_vi_sa_,divido  perf part pass fem abl sg\t\t\tpp4</NL><NL>P di_vi_sa,divido  perf part pass fem nom/voc sg\t\t\tpp4</NL><NL>P divi_sa,divisor  perf part pass neut nom/voc/acc pl\t\t\tpp4</NL><NL>P divi_sa_,divisor  perf part pass fem abl sg\t\t\tpp4</NL><NL>P divi_sa,divisor  perf part pass fem nom/voc sg\t\t\tpp4</NL>\n"
+  },
+  {
+    "input": "in",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "in\n<NL>N in \t\tindeclform\tprep</NL>\n"
+  },
+  {
+    "input": "partes",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "partes\n<NL>N parte_s,pars  fem acc pl\t\t\ts_tis</NL><NL>N parte_s,pars  fem nom/voc pl\t\t\ts_tis</NL>\n"
+  },
+  {
+    "input": "tres",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "tres\n<NL>N tre_s,tres  masc/fem acc pl\t\tindeclform\tnumeral</NL><NL>N tre_s,tres  masc/fem nom pl\t\tindeclform\tnumeral</NL>\n"
+  },
+  {
+    "input": "quarum",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "quarum\n<NL>N qua_rum,qui#1  fem gen pl\t\tindeclform\tinterrog</NL><NL>N qua_rum,qui#2  fem gen pl\t\tindeclform\trelative</NL><NL>N qua_rum,quis#1  fem gen pl\t\tindeclform\tinterrog</NL><NL>N qua_rum,quis#2  fem gen pl\t\tindeclform\tindef</NL>\n"
+  },
+  {
+    "input": "unam",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "unam\n<NL>N u_nam,unus  fem acc sg\t\t\tus_ius_adj</NL>\n"
+  },
+  {
+    "input": "incolunt",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "incolunt\n<NL>V incolo#1  pres ind act 3rd pl\t\t\tconj3</NL>\n"
+  },
+  {
+    "input": "Belgae",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "Belgae\n<NL>N Belga  masc nom/voc pl\t\t\ta_ae</NL><NL>N Belga  masc dat sg\t\t\ta_ae</NL><NL>N Belga  masc gen sg\t\t\ta_ae</NL><NL>N Belgae  masc nom/voc pl\t\t\ta_ae</NL>\n"
+  },
+  {
+    "input": "aliam",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "aliam\n<NL>N alius#2  fem acc sg\t\tindeclform\tirreg_nom2</NL>\n"
+  },
+  {
+    "input": "Aquitani",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "Aquitani\n<NL>N Aqui_ta_ni_,Aquitani  masc nom/voc pl\t\t\tus_i</NL><NL>N Aqui_ta_ni_,Aquitanus  masc nom/voc pl\t\t\tus_a_um</NL><NL>N Aqui_ta_ni_,Aquitanus  neut gen sg\t\t\tus_a_um</NL><NL>N Aqui_ta_ni_,Aquitanus  masc gen sg\t\t\tus_a_um</NL>\n"
+  },
+  {
+    "input": "tertiam",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "tertiam\n<NL>N tertius  fem acc sg\t\t\tius_ia_ium</NL>\n"
+  },
+  {
+    "input": "qui",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "qui\n<NL>N qui_,qui#1  masc nom pl\t\tindeclform\tinterrog</NL><NL>N qui_,qui#1  masc nom sg\t\tindeclform\tinterrog</NL><NL>N qui_,qui#2  masc nom pl\t\tindeclform\trelative</NL><NL>N qui_,qui#2  masc nom sg\t\tindeclform\trelative</NL><NL>N qui_,quis#1  masc nom pl\t\tindeclform\tinterrog</NL><NL>N qui_,quis#2  masc nom pl\t\tindeclform\tindef</NL>\n"
+  },
+  {
+    "input": "ipsorum",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "ipsorum\n<NL>N ipso_rum,ipse  masc/neut gen pl\t\tindeclform\tdemonstr</NL>\n"
+  },
+  {
+    "input": "lingua",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "lingua\n<NL>N lingua_,lingua  fem abl sg\t\t\ta_ae</NL><NL>N lingua  fem nom/voc sg\t\t\ta_ae</NL>\n"
+  },
+  {
+    "input": "Celtae",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "Celtae\n<NL>N Celtae  masc nom/voc pl\t\t\ta_ae</NL>\n"
+  },
+  {
+    "input": "nostra",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "nostra\n<NL>N noster  neut nom/voc/acc pl\t\t\ter_ra_rum</NL><NL>N nostra_,noster  fem abl sg\t\t\ter_ra_rum</NL><NL>N noster  fem nom/voc sg\t\t\ter_ra_rum</NL>\n"
+  },
+  {
+    "input": "Galli",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "Galli\n<NL>N Galli_,Galli  masc nom/voc pl\t\t\tus_i</NL><NL>N Galli_,Gallius  masc/neut gen sg\t\t\tius_ia_ium</NL><NL>N Galli_,Gallus  masc nom/voc pl\t\t\tus_a_um</NL><NL>N Galli_,Gallus  neut gen sg\t\t\tus_a_um</NL><NL>N Galli_,Gallus  masc gen sg\t\t\tus_a_um</NL><NL>N Galli_,Gallus  masc nom/voc pl\t\t\tus_i</NL><NL>N Galli_,Gallus  masc gen sg\t\t\tus_i</NL><NL>N galli_,gallus#1  masc nom/voc pl\t\t\tus_i</NL><NL>N galli_,gallus#1  masc gen sg\t\t\tus_i</NL>\n"
+  },
+  {
+    "input": "appellantur",
+    "opts": [
+      "-L",
+      "-S"
+    ],
+    "expected": "appellantur\n<NL>V appello  pres ind pass 3rd pl\t\t\tconj1,are_vb</NL><NL>V appello#1  pres subj pass 3rd pl\t\t\tconj3</NL>\n"
+  }
+]
