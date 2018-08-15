@@ -1,10 +1,9 @@
+# output files
 *.o
 *.a
-*.out
-*.asc
 
+# binaries
 bin/
-
 src/anal/cruncher
 src/anal/deverbal
 src/anal/findbase
@@ -31,20 +30,3 @@ src/gkends/buildend
 src/gkends/buildword
 src/gkends/indderivtables
 src/gkends/indendtables
-
-stemlib/Greek/conjfile
-stemlib/Greek/derivs/indices/
-stemlib/Greek/endtables/indices/
-stemlib/Greek/steminds/
-stemlib/Greek/stemsrc/flatlems
-stemlib/Greek/stemsrc/goodstem
-stemlib/Greek/stemsrc/headnolen
-stemlib/Greek/stemsrc/stripref
-stemlib/Greek/stemsrc/zapfirstf
-
-stemlib/Latin/conjfile
-stemlib/Latin/derivs/indices/
-stemlib/Latin/endtables/indices/nendind
-stemlib/Latin/endtables/indices/vbendind
-stemlib/Latin/oddfile
-stemlib/Latin/steminds/

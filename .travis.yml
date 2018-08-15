@@ -8,6 +8,4 @@ before_install:
 
 script:
 - bash -c "cd src/ && CFLAGS='-std=gnu89' make && make install"
-- bash -c "cd stemlib/Greek && PATH=$PATH:../../bin MORPHLIB=.. make && PATH=$PATH:../../bin MORPHLIB=.. make"
-- bash -c "cd stemlib/Latin && PATH=$PATH:../../bin MORPHLIB=.. make && PATH=$PATH:../../bin MORPHLIB=.. make"
 - ruby test/test.rb
