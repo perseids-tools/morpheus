@@ -38,16 +38,6 @@ cd src/
 make clean
 CFLAGS='-std=gnu89 -Wno-return-type' make LOADLIBES='-ll'
 make install
-
-cd ../stemlib/Greek/
-make clean
-PATH="$PATH:../../bin" MORPHLIB='..' make
-PATH="$PATH:../../bin" MORPHLIB='..' make
-
-cd ../Latin/
-make clean
-PATH="$PATH:../../bin" MORPHLIB='..' make
-PATH="$PATH:../../bin" MORPHLIB='..' make
 ```
 
 (Tested on macOS High Sierra Version 10.13.5, Apple LLVM version 9.1.0.)
@@ -65,8 +55,18 @@ cd src/
 make clean
 CFLAGS='-std=gnu89' make
 make install
+```
 
-cd ../stemlib/Greek/
+(Tested on Ubuntu 16.04 and 18.04.)
+
+### Stemlibs
+
+The stemlibs are checked in and included in the repository.
+To rebuild the stemlibs, run the following commands (with the same
+`CFLAGS` used when compiling the binaries):
+
+```
+cd stemlib/Greek/
 make clean
 PATH="$PATH:../../bin" MORPHLIB='..' make
 PATH="$PATH:../../bin" MORPHLIB='..' make
@@ -76,8 +76,6 @@ make clean
 PATH="$PATH:../../bin" MORPHLIB='..' make
 PATH="$PATH:../../bin" MORPHLIB='..' make
 ```
-
-(Tested on Ubuntu 16.04 and 18.04.)
 
 ## Usage
 
