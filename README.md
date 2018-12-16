@@ -14,7 +14,7 @@ and [alpheios-project/morpheus](https://github.com/alpheios-project/morpheus).
 ```bash
 docker pull perseidsproject/morpheus
 
-docker run -it morpheus /bin/bash
+docker run -it perseidsproject/morpheus /bin/bash
 ```
 
 (See project on [Docker Hub](https://hub.docker.com/r/perseidsproject/morpheus/).)
