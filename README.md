@@ -117,6 +117,6 @@ $ echo 'cactus' | MORPHLIB=stemlib bin/cruncher -S -L
 
 Requirements:
 
-- `ruby` (~2.5)
+- `ruby` (~3.0)
 
 `./test/test.rb`
