@@ -36,11 +36,11 @@ Requirements:
 ```bash
 cd src/
 make clean
-CFLAGS='-std=gnu89 -Wno-return-type' make LOADLIBES='-ll'
+CFLAGS='-std=gnu89 -Wno-return-type -Wno-implicit-function-declaration' make LOADLIBES='-ll'
 make install
 ```
 
-(Tested on macOS High Sierra Version 10.13.5, Apple LLVM version 9.1.0.)
+(Tested on Apple M1, macOS Ventura 13.1, Apple clang version 14.0.0.)
 
 ### Linux
 
@@ -53,11 +53,11 @@ Requirements:
 ```bash
 cd src/
 make clean
-CFLAGS='-std=gnu89' make
+CFLAGS='-std=gnu89 -fcommon' make
 make install
 ```
 
-(Tested on Ubuntu 16.04 and 18.04.)
+(Tested on Ubuntu 22.04)
 
 ### Stemlibs
 
