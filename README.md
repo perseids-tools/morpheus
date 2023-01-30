@@ -57,7 +57,7 @@ CFLAGS='-std=gnu89 -fcommon' make
 make install
 ```
 
-(Tested on Ubuntu 22.04)
+(Tested on Ubuntu 22.04.)
 
 ### Stemlibs
 
