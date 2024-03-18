@@ -36,7 +36,7 @@ Requirements:
 ```bash
 cd src/
 make clean
-CFLAGS='-std=gnu89 -Wno-return-type -Wno-implicit-function-declaration' make LOADLIBES='-ll'
+CFLAGS='-std=gnu89 -Wno-return-type -Wno-implicit-function-declaration -Wno-error=incompatible-function-pointer-types' make LOADLIBES='-ll'
 make install
 ```
 
